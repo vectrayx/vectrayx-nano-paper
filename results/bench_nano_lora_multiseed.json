@@ -1,0 +1,48 @@
+{
+  "description": "Nano 42M + LoRA (rank=16, alpha=32), tool_sft_mini_v1.jsonl (2801 examples, ratio 1:21), 5 epochs, lr=2e-4",
+  "model": "VectraYX-Nano 42M",
+  "corpus": "tool_sft_mini_v1.jsonl",
+  "corpus_size": 2801,
+  "ratio": "1:21",
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "epochs": 5,
+  "lr": 2e-4,
+  "seeds": {
+    "42": {
+      "B1_cveqa_keyword": 0.008,
+      "B2_classification": {"accuracy": 0.200, "f1_macro": 0.200},
+      "B3_commands": {"exact_match": 0.000, "tool_match": 0.029},
+      "B4_tooluse": 0.220,
+      "B5_conversational": 0.500
+    },
+    "7": {
+      "B1_cveqa_keyword": 0.017,
+      "B2_classification": {"accuracy": 0.200, "f1_macro": 0.200},
+      "B3_commands": {"exact_match": 0.000, "tool_match": 0.029},
+      "B4_tooluse": 0.140,
+      "B5_conversational": 0.600
+    },
+    "13": {
+      "B1_cveqa_keyword": 0.006,
+      "B2_classification": {"accuracy": 0.200, "f1_macro": 0.200},
+      "B3_commands": {"exact_match": 0.000, "tool_match": 0.000},
+      "B4_tooluse": 0.120,
+      "B5_conversational": 0.600
+    },
+    "23": {
+      "B1_cveqa_keyword": 0.014,
+      "B2_classification": {"accuracy": 0.205, "f1_macro": 0.205},
+      "B3_commands": {"exact_match": 0.000, "tool_match": 0.029},
+      "B4_tooluse": 0.100,
+      "B5_conversational": 0.600
+    }
+  },
+  "aggregate": {
+    "B1_mean": 0.011, "B1_std": 0.004,
+    "B2_f1_mean": 0.201, "B2_f1_std": 0.002,
+    "B3_tm_mean": 0.021, "B3_tm_std": 0.012,
+    "B4_mean": 0.145, "B4_std": 0.046,
+    "B5_mean": 0.575, "B5_std": 0.043
+  }
+}

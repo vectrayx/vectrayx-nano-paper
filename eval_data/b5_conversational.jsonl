@@ -1,0 +1,10 @@
+{"prompt": "hola", "category": "saludo"}
+{"prompt": "¿cómo estás?", "category": "saludo"}
+{"prompt": "gracias", "category": "agradecimiento"}
+{"prompt": "buenos días", "category": "saludo"}
+{"prompt": "¿qué eres?", "category": "general"}
+{"prompt": "soy analista de seguridad", "category": "general"}
+{"prompt": "¿qué es ransomware?", "category": "general"}
+{"prompt": "¿qué es CVE-2021-44228?", "category": "general"}
+{"prompt": "¿cómo escaneo una red con nmap?", "category": "general"}
+{"prompt": "explícame XSS en una frase", "category": "general"}

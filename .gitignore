@@ -1,0 +1,39 @@
+# Checkpoints (download from HuggingFace, see README)
+checkpoints/
+*.pt
+*.bin
+*.safetensors
+*.gguf
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Logs and temp
+*.log
+*.tmp
+/tmp/
+
+# AWS
+.aws/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large generated files (regenerate with make corpus)
+corpus/tool_sft_mini_v1_repro.jsonl

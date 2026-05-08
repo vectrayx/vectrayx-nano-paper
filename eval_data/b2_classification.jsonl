@@ -1,0 +1,200 @@
+{"id": "b2_phishing_018", "text": "Correo de 'soporte técnico' pidiendo acceso remoto a tu equipo", "label": "phishing"}
+{"id": "b2_malware_030", "text": "Spyware accediendo a cámara y micrófono sin autorización", "label": "malware"}
+{"id": "b2_malware_031", "text": "Worm propagándose por red interna via SMB", "label": "malware"}
+{"id": "b2_malware_016", "text": "Proceso svchost.exe consumiendo 95% CPU y realizando conexiones a 91.240.118.50", "label": "malware"}
+{"id": "b2_phishing_007", "text": "Invitación a invertir en criptomonedas con retornos garantizados", "label": "phishing"}
+{"id": "b2_ransomware_006", "text": "Impresoras imprimiendo nota de rescate automáticamente en toda la organización", "label": "ransomware"}
+{"id": "b2_apt_018", "text": "Herramienta Cobalt Strike detectada en memoria del proceso lsass.exe", "label": "apt"}
+{"id": "b2_apt_003", "text": "Acceso a Active Directory con cuenta de servicio comprometida", "label": "apt"}
+{"id": "b2_ransomware_016", "text": "Sombra de volumen eliminada, copias de seguridad cifradas", "label": "ransomware"}
+{"id": "b2_malware_014", "text": "Spyware accediendo a cámara y micrófono sin autorización", "label": "malware"}
+{"id": "b2_phishing_004", "text": "Notificación de envío de paquete con link sospechoso a verify-now.info", "label": "phishing"}
+{"id": "b2_phishing_022", "text": "Alerta de seguridad falsa de Microsoft pidiendo verificación", "label": "phishing"}
+{"id": "b2_malware_007", "text": "Worm propagándose por red interna via SMB", "label": "malware"}
+{"id": "b2_malware_021", "text": "Rootkit modificando binarios del sistema operativo", "label": "malware"}
+{"id": "b2_ransomware_024", "text": "Mensaje: 'Sus archivos han sido cifrados. Pague 50000 USD en 48h'", "label": "ransomware"}
+{"id": "b2_ransomware_023", "text": "Sombra de volumen eliminada, copias de seguridad cifradas", "label": "ransomware"}
+{"id": "b2_otro_034", "text": "Logs de auditoría desactivados en controlador de dominio", "label": "otro"}
+{"id": "b2_otro_003", "text": "Vulnerabilidad XSS en aplicación web interna descubierta en auditoría", "label": "otro"}
+{"id": "b2_ransomware_027", "text": "Impresoras imprimiendo nota de rescate automáticamente en toda la organización", "label": "ransomware"}
+{"id": "b2_phishing_032", "text": "Email de BBVA solicitando credenciales urgentemente con enlace a update-account.net", "label": "phishing"}
+{"id": "b2_otro_006", "text": "Logs de auditoría desactivados en controlador de dominio", "label": "otro"}
+{"id": "b2_ransomware_017", "text": "Mensaje: 'Sus archivos han sido cifrados. Pague 10000 USD en 48h'", "label": "ransomware"}
+{"id": "b2_malware_000", "text": "Proceso explorer.exe consumiendo 95% CPU y realizando conexiones a 91.240.118.50", "label": "malware"}
+{"id": "b2_otro_030", "text": "Actualización de sistema fallida dejando parche de seguridad sin aplicar", "label": "otro"}
+{"id": "b2_phishing_014", "text": "Alerta de seguridad falsa de Microsoft pidiendo verificación", "label": "phishing"}
+{"id": "b2_malware_037", "text": "Rootkit modificando binarios del sistema operativo", "label": "malware"}
+{"id": "b2_otro_009", "text": "Actualización de sistema fallida dejando parche de seguridad sin aplicar", "label": "otro"}
+{"id": "b2_phishing_036", "text": "Notificación de envío de paquete con link sospechoso a secure-login.xyz", "label": "phishing"}
+{"id": "b2_phishing_031", "text": "Invitación a invertir en criptomonedas con retornos garantizados", "label": "phishing"}
+{"id": "b2_ransomware_007", "text": "Archivos cifrados con extensión .pays y nota de rescate en escritorio", "label": "ransomware"}
+{"id": "b2_apt_015", "text": "Exfiltración de datos hacia IP 91.240.118.50 durante 3 meses sin detección", "label": "apt"}
+{"id": "b2_phishing_005", "text": "Premio falso que requiere datos personales y tarjeta de crédito", "label": "phishing"}
+{"id": "b2_apt_035", "text": "Movimiento lateral detectado en 15 sistemas usando credenciales robadas", "label": "apt"}
+{"id": "b2_phishing_027", "text": "Factura falsa de SUNAT con archivo adjunto malicioso", "label": "phishing"}
+{"id": "b2_otro_023", "text": "Actualización de sistema fallida dejando parche de seguridad sin aplicar", "label": "otro"}
+{"id": "b2_apt_025", "text": "Herramienta Cobalt Strike detectada en memoria del proceso lsass.exe", "label": "apt"}
+{"id": "b2_otro_036", "text": "Certificado SSL expirado en servidor de producción", "label": "otro"}
+{"id": "b2_ransomware_026", "text": "Base de datos SQL Server cifrada, atacante exige rescate via Tor", "label": "ransomware"}
+{"id": "b2_otro_014", "text": "Error de configuración en firewall permite acceso no autorizado a VLAN interna", "label": "otro"}
+{"id": "b2_malware_002", "text": "Backdoor detectado en puerto 8080 con comunicación cifrada", "label": "malware"}
+{"id": "b2_ransomware_009", "text": "Sombra de volumen eliminada, copias de seguridad cifradas", "label": "ransomware"}
+{"id": "b2_phishing_033", "text": "Mensaje de texto afirmando que tu cuenta bancaria fue bloqueada, haz clic en http://bit.ly/abc123", "label": "phishing"}
+{"id": "b2_ransomware_029", "text": "Todos los documentos en servidor de archivos inaccesibles, exigen 1.2 BTC", "label": "ransomware"}
+{"id": "b2_otro_015", "text": "Certificado SSL expirado en servidor de producción", "label": "otro"}
+{"id": "b2_ransomware_010", "text": "Mensaje: 'Sus archivos han sido cifrados. Pague 50000 USD en 48h'", "label": "ransomware"}
+{"id": "b2_apt_017", "text": "Acceso a Active Directory con cuenta de servicio comprometida", "label": "apt"}
+{"id": "b2_ransomware_003", "text": "Mensaje: 'Sus archivos han sido cifrados. Pague 5000 USD en 48h'", "label": "ransomware"}
+{"id": "b2_otro_037", "text": "Actualización de sistema fallida dejando parche de seguridad sin aplicar", "label": "otro"}
+{"id": "b2_malware_032", "text": "Proceso winlogon.exe consumiendo 95% CPU y realizando conexiones a 185.220.101.1", "label": "malware"}
+{"id": "b2_malware_027", "text": "Keylogger capturando pulsaciones y enviando datos a verify-now.info", "label": "malware"}
+{"id": "b2_otro_027", "text": "Logs de auditoría desactivados en controlador de dominio", "label": "otro"}
+{"id": "b2_ransomware_034", "text": "Impresoras imprimiendo nota de rescate automáticamente en toda la organización", "label": "ransomware"}
+{"id": "b2_apt_039", "text": "Herramienta Cobalt Strike detectada en memoria del proceso lsass.exe", "label": "apt"}
+{"id": "b2_otro_032", "text": "Contraseña débil en cuenta de administrador local sin MFA", "label": "otro"}
+{"id": "b2_phishing_034", "text": "Correo de 'soporte técnico' pidiendo acceso remoto a tu equipo", "label": "phishing"}
+{"id": "b2_apt_027", "text": "Credenciales de administrador de dominio comprometidas via Kerberoasting", "label": "apt"}
+{"id": "b2_malware_039", "text": "Worm propagándose por red interna via SMB", "label": "malware"}
+{"id": "b2_apt_012", "text": "Atacante con acceso a red durante semanas realizando reconocimiento interno", "label": "apt"}
+{"id": "b2_ransomware_019", "text": "Base de datos SQL Server cifrada, atacante exige rescate via Tor", "label": "ransomware"}
+{"id": "b2_phishing_012", "text": "Notificación de envío de paquete con link sospechoso a verify-now.info", "label": "phishing"}
+{"id": "b2_otro_025", "text": "Contraseña débil en cuenta de administrador local sin MFA", "label": "otro"}
+{"id": "b2_apt_038", "text": "Acceso a Active Directory con cuenta de servicio comprometida", "label": "apt"}
+{"id": "b2_phishing_035", "text": "Factura falsa de PayPal con archivo adjunto malicioso", "label": "phishing"}
+{"id": "b2_otro_001", "text": "Certificado SSL expirado en servidor de producción", "label": "otro"}
+{"id": "b2_phishing_029", "text": "Premio falso que requiere datos personales y tarjeta de crédito", "label": "phishing"}
+{"id": "b2_malware_018", "text": "Backdoor detectado en puerto 4444 con comunicación cifrada", "label": "malware"}
+{"id": "b2_malware_003", "text": "Keylogger capturando pulsaciones y enviando datos a update-account.net", "label": "malware"}
+{"id": "b2_malware_015", "text": "Worm propagándose por red interna via SMB", "label": "malware"}
+{"id": "b2_phishing_026", "text": "Correo de 'soporte técnico' pidiendo acceso remoto a tu equipo", "label": "phishing"}
+{"id": "b2_ransomware_013", "text": "Impresoras imprimiendo nota de rescate automáticamente en toda la organización", "label": "ransomware"}
+{"id": "b2_apt_026", "text": "Atacante con acceso a red durante semanas realizando reconocimiento interno", "label": "apt"}
+{"id": "b2_apt_016", "text": "Implante persistente encontrado en servidor crítico activo desde 3 meses", "label": "apt"}
+{"id": "b2_malware_019", "text": "Keylogger capturando pulsaciones y enviando datos a verify-now.info", "label": "malware"}
+{"id": "b2_apt_014", "text": "Movimiento lateral detectado en 87 sistemas usando credenciales robadas", "label": "apt"}
+{"id": "b2_phishing_015", "text": "Invitación a invertir en criptomonedas con retornos garantizados", "label": "phishing"}
+{"id": "b2_otro_029", "text": "Certificado SSL expirado en servidor de producción", "label": "otro"}
+{"id": "b2_malware_017", "text": "Archivo ntdll.dll modificado en System32 con hash diferente al original", "label": "malware"}
+{"id": "b2_otro_016", "text": "Actualización de sistema fallida dejando parche de seguridad sin aplicar", "label": "otro"}
+{"id": "b2_malware_001", "text": "Archivo ntdll.dll modificado en System32 con hash diferente al original", "label": "malware"}
+{"id": "b2_ransomware_033", "text": "Base de datos SQL Server cifrada, atacante exige rescate via Tor", "label": "ransomware"}
+{"id": "b2_malware_025", "text": "Archivo ntdll.dll modificado en System32 con hash diferente al original", "label": "malware"}
+{"id": "b2_ransomware_004", "text": "Ransomware LockBit detectado cifrando red corporativa", "label": "ransomware"}
+{"id": "b2_otro_028", "text": "Error de configuración en firewall permite acceso no autorizado a VLAN interna", "label": "otro"}
+{"id": "b2_malware_005", "text": "Rootkit modificando binarios del sistema operativo", "label": "malware"}
+{"id": "b2_ransomware_002", "text": "Sombra de volumen eliminada, copias de seguridad cifradas", "label": "ransomware"}
+{"id": "b2_malware_004", "text": "Troyano bancario interceptando transacciones del navegador", "label": "malware"}
+{"id": "b2_phishing_006", "text": "Alerta de seguridad falsa de Microsoft pidiendo verificación", "label": "phishing"}
+{"id": "b2_phishing_009", "text": "Mensaje de texto afirmando que tu cuenta bancaria fue bloqueada, haz clic en http://tinyurl.com/xyz789", "label": "phishing"}
+{"id": "b2_ransomware_015", "text": "Todos los documentos en servidor de archivos inaccesibles, exigen 0.5 BTC", "label": "ransomware"}
+{"id": "b2_phishing_013", "text": "Premio falso que requiere datos personales y tarjeta de crédito", "label": "phishing"}
+{"id": "b2_otro_026", "text": "Puerto 3389 RDP expuesto directamente a internet sin restricciones", "label": "otro"}
+{"id": "b2_malware_008", "text": "Proceso winlogon.exe consumiendo 95% CPU y realizando conexiones a 45.142.212.100", "label": "malware"}
+{"id": "b2_apt_037", "text": "Implante persistente encontrado en servidor crítico activo desde 12 meses", "label": "apt"}
+{"id": "b2_apt_034", "text": "Credenciales de administrador de dominio comprometidas via Kerberoasting", "label": "apt"}
+{"id": "b2_phishing_019", "text": "Factura falsa de DGI con archivo adjunto malicioso", "label": "phishing"}
+{"id": "b2_apt_024", "text": "Acceso a Active Directory con cuenta de servicio comprometida", "label": "apt"}
+{"id": "b2_malware_012", "text": "Troyano bancario interceptando transacciones del navegador", "label": "malware"}
+{"id": "b2_apt_031", "text": "Acceso a Active Directory con cuenta de servicio comprometida", "label": "apt"}
+{"id": "b2_apt_009", "text": "Implante persistente encontrado en servidor crítico activo desde 12 meses", "label": "apt"}
+{"id": "b2_apt_036", "text": "Exfiltración de datos hacia IP 185.220.101.1 durante 3 meses sin detección", "label": "apt"}
+{"id": "b2_ransomware_021", "text": "Archivos cifrados con extensión .pays y nota de rescate en escritorio", "label": "ransomware"}
+{"id": "b2_ransomware_020", "text": "Impresoras imprimiendo nota de rescate automáticamente en toda la organización", "label": "ransomware"}
+{"id": "b2_otro_038", "text": "Vulnerabilidad XSS en aplicación web interna descubierta en auditoría", "label": "otro"}
+{"id": "b2_phishing_020", "text": "Notificación de envío de paquete con link sospechoso a verify-now.info", "label": "phishing"}
+{"id": "b2_apt_006", "text": "Credenciales de administrador de dominio comprometidas via Kerberoasting", "label": "apt"}
+{"id": "b2_malware_013", "text": "Rootkit modificando binarios del sistema operativo", "label": "malware"}
+{"id": "b2_phishing_010", "text": "Correo de 'soporte técnico' pidiendo acceso remoto a tu equipo", "label": "phishing"}
+{"id": "b2_otro_002", "text": "Actualización de sistema fallida dejando parche de seguridad sin aplicar", "label": "otro"}
+{"id": "b2_otro_033", "text": "Puerto 3389 RDP expuesto directamente a internet sin restricciones", "label": "otro"}
+{"id": "b2_apt_030", "text": "Implante persistente encontrado en servidor crítico activo desde 6 meses", "label": "apt"}
+{"id": "b2_malware_036", "text": "Troyano bancario interceptando transacciones del navegador", "label": "malware"}
+{"id": "b2_apt_029", "text": "Exfiltración de datos hacia IP 185.220.101.1 durante 3 meses sin detección", "label": "apt"}
+{"id": "b2_otro_020", "text": "Logs de auditoría desactivados en controlador de dominio", "label": "otro"}
+{"id": "b2_malware_020", "text": "Troyano bancario interceptando transacciones del navegador", "label": "malware"}
+{"id": "b2_phishing_028", "text": "Notificación de envío de paquete con link sospechoso a secure-login.xyz", "label": "phishing"}
+{"id": "b2_malware_029", "text": "Rootkit modificando binarios del sistema operativo", "label": "malware"}
+{"id": "b2_phishing_017", "text": "Mensaje de texto afirmando que tu cuenta bancaria fue bloqueada, haz clic en http://tinyurl.com/xyz789", "label": "phishing"}
+{"id": "b2_otro_010", "text": "Vulnerabilidad XSS en aplicación web interna descubierta en auditoría", "label": "otro"}
+{"id": "b2_ransomware_008", "text": "Todos los documentos en servidor de archivos inaccesibles, exigen 2.0 BTC", "label": "ransomware"}
+{"id": "b2_malware_022", "text": "Spyware accediendo a cámara y micrófono sin autorización", "label": "malware"}
+{"id": "b2_otro_035", "text": "Error de configuración en firewall permite acceso no autorizado a VLAN interna", "label": "otro"}
+{"id": "b2_apt_001", "text": "Exfiltración de datos hacia IP 91.240.118.50 durante 3 meses sin detección", "label": "apt"}
+{"id": "b2_ransomware_038", "text": "Mensaje: 'Sus archivos han sido cifrados. Pague 50000 USD en 48h'", "label": "ransomware"}
+{"id": "b2_ransomware_018", "text": "Ransomware LockBit detectado cifrando red corporativa", "label": "ransomware"}
+{"id": "b2_malware_033", "text": "Archivo winsock.dll modificado en System32 con hash diferente al original", "label": "malware"}
+{"id": "b2_otro_000", "text": "Error de configuración en firewall permite acceso no autorizado a VLAN interna", "label": "otro"}
+{"id": "b2_ransomware_005", "text": "Base de datos SQL Server cifrada, atacante exige rescate via Tor", "label": "ransomware"}
+{"id": "b2_ransomware_000", "text": "Archivos cifrados con extensión .pays y nota de rescate en escritorio", "label": "ransomware"}
+{"id": "b2_phishing_001", "text": "Mensaje de texto afirmando que tu cuenta bancaria fue bloqueada, haz clic en http://bit.ly/abc123", "label": "phishing"}
+{"id": "b2_phishing_039", "text": "Invitación a invertir en criptomonedas con retornos garantizados", "label": "phishing"}
+{"id": "b2_ransomware_011", "text": "Ransomware LockBit detectado cifrando red corporativa", "label": "ransomware"}
+{"id": "b2_apt_028", "text": "Movimiento lateral detectado en 42 sistemas usando credenciales robadas", "label": "apt"}
+{"id": "b2_phishing_011", "text": "Factura falsa de DGI con archivo adjunto malicioso", "label": "phishing"}
+{"id": "b2_phishing_030", "text": "Alerta de seguridad falsa de Microsoft pidiendo verificación", "label": "phishing"}
+{"id": "b2_malware_023", "text": "Worm propagándose por red interna via SMB", "label": "malware"}
+{"id": "b2_malware_010", "text": "Backdoor detectado en puerto 443 con comunicación cifrada", "label": "malware"}
+{"id": "b2_phishing_021", "text": "Premio falso que requiere datos personales y tarjeta de crédito", "label": "phishing"}
+{"id": "b2_apt_021", "text": "Movimiento lateral detectado en 87 sistemas usando credenciales robadas", "label": "apt"}
+{"id": "b2_phishing_000", "text": "Email de BBVA solicitando credenciales urgentemente con enlace a update-account.net", "label": "phishing"}
+{"id": "b2_phishing_023", "text": "Invitación a invertir en criptomonedas con retornos garantizados", "label": "phishing"}
+{"id": "b2_phishing_003", "text": "Factura falsa de Santander con archivo adjunto malicioso", "label": "phishing"}
+{"id": "b2_apt_033", "text": "Atacante con acceso a red durante semanas realizando reconocimiento interno", "label": "apt"}
+{"id": "b2_phishing_037", "text": "Premio falso que requiere datos personales y tarjeta de crédito", "label": "phishing"}
+{"id": "b2_ransomware_025", "text": "Ransomware LockBit detectado cifrando red corporativa", "label": "ransomware"}
+{"id": "b2_malware_009", "text": "Archivo ntdll.dll modificado en System32 con hash diferente al original", "label": "malware"}
+{"id": "b2_phishing_024", "text": "Email de PayPal solicitando credenciales urgentemente con enlace a secure-login.xyz", "label": "phishing"}
+{"id": "b2_ransomware_014", "text": "Archivos cifrados con extensión .pays y nota de rescate en escritorio", "label": "ransomware"}
+{"id": "b2_otro_004", "text": "Contraseña débil en cuenta de administrador local sin MFA", "label": "otro"}
+{"id": "b2_otro_039", "text": "Contraseña débil en cuenta de administrador local sin MFA", "label": "otro"}
+{"id": "b2_phishing_016", "text": "Email de SUNAT solicitando credenciales urgentemente con enlace a verify-now.info", "label": "phishing"}
+{"id": "b2_otro_024", "text": "Vulnerabilidad XSS en aplicación web interna descubierta en auditoría", "label": "otro"}
+{"id": "b2_ransomware_028", "text": "Archivos cifrados con extensión .crypt y nota de rescate en escritorio", "label": "ransomware"}
+{"id": "b2_malware_006", "text": "Spyware accediendo a cámara y micrófono sin autorización", "label": "malware"}
+{"id": "b2_ransomware_035", "text": "Archivos cifrados con extensión .pays y nota de rescate en escritorio", "label": "ransomware"}
+{"id": "b2_otro_008", "text": "Certificado SSL expirado en servidor de producción", "label": "otro"}
+{"id": "b2_apt_011", "text": "Herramienta Cobalt Strike detectada en memoria del proceso lsass.exe", "label": "apt"}
+{"id": "b2_ransomware_032", "text": "Ransomware LockBit detectado cifrando red corporativa", "label": "ransomware"}
+{"id": "b2_phishing_025", "text": "Mensaje de texto afirmando que tu cuenta bancaria fue bloqueada, haz clic en http://bit.ly/abc123", "label": "phishing"}
+{"id": "b2_otro_013", "text": "Logs de auditoría desactivados en controlador de dominio", "label": "otro"}
+{"id": "b2_ransomware_001", "text": "Todos los documentos en servidor de archivos inaccesibles, exigen 1.2 BTC", "label": "ransomware"}
+{"id": "b2_malware_034", "text": "Backdoor detectado en puerto 1337 con comunicación cifrada", "label": "malware"}
+{"id": "b2_otro_017", "text": "Vulnerabilidad XSS en aplicación web interna descubierta en auditoría", "label": "otro"}
+{"id": "b2_apt_022", "text": "Exfiltración de datos hacia IP 91.240.118.50 durante 3 meses sin detección", "label": "apt"}
+{"id": "b2_ransomware_031", "text": "Mensaje: 'Sus archivos han sido cifrados. Pague 50000 USD en 48h'", "label": "ransomware"}
+{"id": "b2_apt_007", "text": "Movimiento lateral detectado en 15 sistemas usando credenciales robadas", "label": "apt"}
+{"id": "b2_apt_010", "text": "Acceso a Active Directory con cuenta de servicio comprometida", "label": "apt"}
+{"id": "b2_ransomware_039", "text": "Ransomware LockBit detectado cifrando red corporativa", "label": "ransomware"}
+{"id": "b2_apt_004", "text": "Herramienta Cobalt Strike detectada en memoria del proceso lsass.exe", "label": "apt"}
+{"id": "b2_malware_026", "text": "Backdoor detectado en puerto 8080 con comunicación cifrada", "label": "malware"}
+{"id": "b2_otro_021", "text": "Error de configuración en firewall permite acceso no autorizado a VLAN interna", "label": "otro"}
+{"id": "b2_ransomware_012", "text": "Base de datos SQL Server cifrada, atacante exige rescate via Tor", "label": "ransomware"}
+{"id": "b2_apt_005", "text": "Atacante con acceso a red durante semanas realizando reconocimiento interno", "label": "apt"}
+{"id": "b2_apt_013", "text": "Credenciales de administrador de dominio comprometidas via Kerberoasting", "label": "apt"}
+{"id": "b2_ransomware_037", "text": "Sombra de volumen eliminada, copias de seguridad cifradas", "label": "ransomware"}
+{"id": "b2_apt_032", "text": "Herramienta Cobalt Strike detectada en memoria del proceso lsass.exe", "label": "apt"}
+{"id": "b2_otro_007", "text": "Error de configuración en firewall permite acceso no autorizado a VLAN interna", "label": "otro"}
+{"id": "b2_phishing_038", "text": "Alerta de seguridad falsa de Microsoft pidiendo verificación", "label": "phishing"}
+{"id": "b2_phishing_008", "text": "Email de SUNAT solicitando credenciales urgentemente con enlace a verify-now.info", "label": "phishing"}
+{"id": "b2_phishing_002", "text": "Correo de 'soporte técnico' pidiendo acceso remoto a tu equipo", "label": "phishing"}
+{"id": "b2_malware_028", "text": "Troyano bancario interceptando transacciones del navegador", "label": "malware"}
+{"id": "b2_malware_035", "text": "Keylogger capturando pulsaciones y enviando datos a update-account.net", "label": "malware"}
+{"id": "b2_malware_011", "text": "Keylogger capturando pulsaciones y enviando datos a verify-now.info", "label": "malware"}
+{"id": "b2_ransomware_030", "text": "Sombra de volumen eliminada, copias de seguridad cifradas", "label": "ransomware"}
+{"id": "b2_otro_031", "text": "Vulnerabilidad XSS en aplicación web interna descubierta en auditoría", "label": "otro"}
+{"id": "b2_apt_002", "text": "Implante persistente encontrado en servidor crítico activo desde 3 meses", "label": "apt"}
+{"id": "b2_otro_018", "text": "Contraseña débil en cuenta de administrador local sin MFA", "label": "otro"}
+{"id": "b2_apt_008", "text": "Exfiltración de datos hacia IP 185.220.101.1 durante 3 meses sin detección", "label": "apt"}
+{"id": "b2_otro_005", "text": "Puerto 3389 RDP expuesto directamente a internet sin restricciones", "label": "otro"}
+{"id": "b2_apt_020", "text": "Credenciales de administrador de dominio comprometidas via Kerberoasting", "label": "apt"}
+{"id": "b2_malware_038", "text": "Spyware accediendo a cámara y micrófono sin autorización", "label": "malware"}
+{"id": "b2_otro_011", "text": "Contraseña débil en cuenta de administrador local sin MFA", "label": "otro"}
+{"id": "b2_ransomware_022", "text": "Todos los documentos en servidor de archivos inaccesibles, exigen 1.2 BTC", "label": "ransomware"}
+{"id": "b2_apt_023", "text": "Implante persistente encontrado en servidor crítico activo desde 6 meses", "label": "apt"}
+{"id": "b2_malware_024", "text": "Proceso winlogon.exe consumiendo 95% CPU y realizando conexiones a 45.142.212.100", "label": "malware"}
+{"id": "b2_apt_019", "text": "Atacante con acceso a red durante semanas realizando reconocimiento interno", "label": "apt"}
+{"id": "b2_otro_022", "text": "Certificado SSL expirado en servidor de producción", "label": "otro"}
+{"id": "b2_apt_000", "text": "Movimiento lateral detectado en 15 sistemas usando credenciales robadas", "label": "apt"}
+{"id": "b2_otro_012", "text": "Puerto 3389 RDP expuesto directamente a internet sin restricciones", "label": "otro"}
+{"id": "b2_ransomware_036", "text": "Todos los documentos en servidor de archivos inaccesibles, exigen 2.0 BTC", "label": "ransomware"}
+{"id": "b2_otro_019", "text": "Puerto 3389 RDP expuesto directamente a internet sin restricciones", "label": "otro"}

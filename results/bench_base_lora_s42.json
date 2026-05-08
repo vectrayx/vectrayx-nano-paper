@@ -1,0 +1,17 @@
+{
+  "description": "Base 260M + LoRA (rank=16, alpha=32), tool_sft_mini_v1.jsonl (2801 examples, ratio 1:21), 5 epochs, lr=2e-4, seed=42",
+  "model": "VectraYX-Base 260M",
+  "corpus": "tool_sft_mini_v1.jsonl",
+  "corpus_size": 2801,
+  "ratio": "1:21",
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "epochs": 5,
+  "lr": 2e-4,
+  "seed": 42,
+  "B1_cveqa_keyword": 0.025,
+  "B2_classification": {"accuracy": 0.200, "f1_macro": 0.200},
+  "B3_commands": {"exact_match": 0.000, "tool_match": 0.000},
+  "B4_tooluse": 0.580,
+  "B5_conversational": 0.600
+}

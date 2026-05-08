@@ -1,0 +1,40 @@
+{
+  "model": {
+    "vocab_size": 16384,
+    "n_layers": 8,
+    "n_heads": 8,
+    "n_kv_heads": 2,
+    "d_model": 512,
+    "d_ffn": 2304,
+    "max_seq_len": 1024,
+    "rope_theta": 10000.0,
+    "rms_eps": 1e-6,
+    "init_std": 0.02,
+    "dropout": 0.0,
+    "tie_embeddings": true,
+    "qk_norm": true,
+    "z_loss_coef": 1e-4
+  },
+  "tokenizer": {
+    "vocab_size": 16384,
+    "model_type": "bpe",
+    "character_coverage": 1.0,
+    "byte_fallback": true,
+    "normalization": "nmt_nfkc",
+    "split_digits": true,
+    "split_by_unicode_script": true,
+    "add_dummy_prefix": true,
+    "user_defined_symbols": [
+      "<|pad|>", "<|bos|>", "<|eos|>", "<|unk|>", "<|sep|>",
+      "<|system|>", "<|user|>", "<|assistant|>", "<|end|>",
+      "<|tool_call|>", "<|/tool_call|>", "<|tool_result|>", "<|/tool_result|>",
+      "<|cve|>", "<|cvss|>", "<|ioc|>", "<|ttp|>", "<|mitre|>", "<|kev|>",
+      "<|exploit|>", "<|patch|>", "<|alert|>",
+      "<|critical|>", "<|high|>", "<|medium|>", "<|low|>", "<|info|>"
+    ],
+    "balance": {
+      "conversational_ratio": 0.5,
+      "technical_ratio": 0.5
+    }
+  }
+}

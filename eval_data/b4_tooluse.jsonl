@@ -1,0 +1,25 @@
+{"id": "b4_000", "question": "Dame información sobre CVE-2024-1234", "expected_tool": "nvd_get_cve"}
+{"id": "b4_001", "question": "¿Qué es la vulnerabilidad CVE-2023-44487?", "expected_tool": "nvd_get_cve"}
+{"id": "b4_002", "question": "Analiza CVE-2024-21762 y dime su impacto", "expected_tool": "nvd_get_cve"}
+{"id": "b4_003", "question": "¿Cuál es el CVSS de CVE-2021-44228?", "expected_tool": "nvd_get_cve"}
+{"id": "b4_004", "question": "Necesito el detalle técnico de CVE-2023-23397", "expected_tool": "nvd_get_cve"}
+{"id": "b4_005", "question": "¿CVE-2024-1234 está siendo explotada activamente?", "expected_tool": "cisa_kev_check"}
+{"id": "b4_006", "question": "Verifica si CVE-2023-44487 está en CISA KEV", "expected_tool": "cisa_kev_check"}
+{"id": "b4_007", "question": "¿Debo parchear urgentemente CVE-2021-44228?", "expected_tool": "cisa_kev_check"}
+{"id": "b4_008", "question": "¿Hay explotación confirmada de CVE-2023-23397?", "expected_tool": "cisa_kev_check"}
+{"id": "b4_009", "question": "¿Qué CVEs existen para Apache Log4j?", "expected_tool": "nvd_search"}
+{"id": "b4_010", "question": "Busca vulnerabilidades críticas en Windows RDP", "expected_tool": "nvd_search"}
+{"id": "b4_011", "question": "CVEs de Fortinet FortiGate con CVSS mayor a 9", "expected_tool": "nvd_search"}
+{"id": "b4_012", "question": "¿Qué vulnerabilidades tiene OpenSSL?", "expected_tool": "nvd_search"}
+{"id": "b4_013", "question": "¿La IP 185.220.101.1 es maliciosa?", "expected_tool": "otx_check_ioc"}
+{"id": "b4_014", "question": "Verifica si evil-domain.xyz es un IOC conocido", "expected_tool": "otx_check_ioc"}
+{"id": "b4_015", "question": "¿El hash a1b2c3d4... corresponde a malware?", "expected_tool": "otx_check_ioc"}
+{"id": "b4_016", "question": "Analiza la reputación de 45.142.212.100", "expected_tool": "otx_check_ioc"}
+{"id": "b4_017", "question": "Escanea los puertos de 192.168.1.1", "expected_tool": "bash_exec"}
+{"id": "b4_018", "question": "Muestra los procesos con conexiones de red", "expected_tool": "bash_exec"}
+{"id": "b4_019", "question": "Busca archivos modificados en las últimas 2 horas", "expected_tool": "bash_exec"}
+{"id": "b4_020", "question": "¿Qué fecha y hora tiene el servidor?", "expected_tool": "bash_exec"}
+{"id": "b4_021", "question": "Lista los usuarios con shell válida en el sistema", "expected_tool": "bash_exec"}
+{"id": "b4_022", "question": "Captura el tráfico DNS durante 30 segundos", "expected_tool": "bash_exec"}
+{"id": "b4_023", "question": "Verifica la integridad de /usr/bin/ssh", "expected_tool": "bash_exec"}
+{"id": "b4_024", "question": "Muestra el espacio libre en disco", "expected_tool": "bash_exec"}

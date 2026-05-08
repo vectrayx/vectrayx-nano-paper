@@ -1,0 +1,50 @@
+{"id": "b4v2_000", "question": "qué hora es", "expected_tool": "bash_exec"}
+{"id": "b4v2_001", "question": "dame la fecha de hoy", "expected_tool": "bash_exec"}
+{"id": "b4v2_002", "question": "hora UTC del servidor", "expected_tool": "bash_exec"}
+{"id": "b4v2_003", "question": "quién soy", "expected_tool": "bash_exec"}
+{"id": "b4v2_004", "question": "qué grupos tengo", "expected_tool": "bash_exec"}
+{"id": "b4v2_005", "question": "en qué directorio estoy", "expected_tool": "bash_exec"}
+{"id": "b4v2_006", "question": "lista los archivos aquí", "expected_tool": "bash_exec"}
+{"id": "b4v2_007", "question": "qué hay en /tmp", "expected_tool": "bash_exec"}
+{"id": "b4v2_008", "question": "cuánta memoria libre hay", "expected_tool": "bash_exec"}
+{"id": "b4v2_009", "question": "uso de disco", "expected_tool": "bash_exec"}
+{"id": "b4v2_010", "question": "espacio en la partición raíz", "expected_tool": "bash_exec"}
+{"id": "b4v2_011", "question": "qué sistema operativo es", "expected_tool": "bash_exec"}
+{"id": "b4v2_012", "question": "versión del kernel", "expected_tool": "bash_exec"}
+{"id": "b4v2_013", "question": "cuánto tiempo lleva encendido", "expected_tool": "bash_exec"}
+{"id": "b4v2_014", "question": "cuál es el hostname", "expected_tool": "bash_exec"}
+{"id": "b4v2_015", "question": "cuál es mi IP", "expected_tool": "bash_exec"}
+{"id": "b4v2_016", "question": "muéstrame mi identidad completa", "expected_tool": "bash_exec"}
+{"id": "b4v2_017", "question": "qué distribución linux es", "expected_tool": "bash_exec"}
+{"id": "b4v2_018", "question": "uptime en formato legible", "expected_tool": "bash_exec"}
+{"id": "b4v2_019", "question": "cuánto ocupa /var/log", "expected_tool": "bash_exec"}
+{"id": "b4v2_020", "question": "qué puertos están escuchando", "expected_tool": "bash_exec"}
+{"id": "b4v2_021", "question": "conexiones TCP establecidas", "expected_tool": "bash_exec"}
+{"id": "b4v2_022", "question": "procesos que más CPU usan", "expected_tool": "bash_exec"}
+{"id": "b4v2_023", "question": "cuántos procesos hay corriendo", "expected_tool": "bash_exec"}
+{"id": "b4v2_024", "question": "últimos 10 logins del sistema", "expected_tool": "bash_exec"}
+{"id": "b4v2_025", "question": "errores recientes en el journal", "expected_tool": "bash_exec"}
+{"id": "b4v2_026", "question": "archivos modificados hoy", "expected_tool": "bash_exec"}
+{"id": "b4v2_027", "question": "busca errores en syslog", "expected_tool": "bash_exec"}
+{"id": "b4v2_028", "question": "interfaces de red del sistema", "expected_tool": "bash_exec"}
+{"id": "b4v2_029", "question": "tabla de rutas de red", "expected_tool": "bash_exec"}
+{"id": "b4v2_030", "question": "dame detalles de CVE-2021-44228", "expected_tool": "nvd_get_cve"}
+{"id": "b4v2_031", "question": "qué sabes de CVE-2024-4577", "expected_tool": "nvd_get_cve"}
+{"id": "b4v2_032", "question": "información sobre CVE-2023-44487", "expected_tool": "nvd_get_cve"}
+{"id": "b4v2_033", "question": "busca CVEs de log4j", "expected_tool": "nvd_search"}
+{"id": "b4v2_034", "question": "vulnerabilidades de openssh", "expected_tool": "nvd_search"}
+{"id": "b4v2_035", "question": "CVEs críticos de apache", "expected_tool": "nvd_search"}
+{"id": "b4v2_036", "question": "está CVE-2021-44228 en KEV", "expected_tool": "cisa_kev_check"}
+{"id": "b4v2_037", "question": "verifica KEV para CVE-2024-27198", "expected_tool": "cisa_kev_check"}
+{"id": "b4v2_038", "question": "¿debo parchear CVE-2023-44487?", "expected_tool": "cisa_kev_check"}
+{"id": "b4v2_039", "question": "CVEs de fortinet fortigate", "expected_tool": "nvd_search"}
+{"id": "b4v2_040", "question": "es maliciosa la IP 45.155.205.12", "expected_tool": "otx_check_ioc"}
+{"id": "b4v2_041", "question": "reputación de 185.220.101.42", "expected_tool": "otx_check_ioc"}
+{"id": "b4v2_042", "question": "verifica 194.165.16.71 en OTX", "expected_tool": "otx_check_ioc"}
+{"id": "b4v2_043", "question": "¿103.74.19.104 es un IOC conocido?", "expected_tool": "otx_check_ioc"}
+{"id": "b4v2_044", "question": "reputación de phish-bank.test", "expected_tool": "otx_check_ioc"}
+{"id": "b4v2_045", "question": "¿malware-drop.example.org es malicioso?", "expected_tool": "otx_check_ioc"}
+{"id": "b4v2_046", "question": "verifica el hash 44d88612fea8a8f36de82e1278abb02f", "expected_tool": "otx_check_ioc"}
+{"id": "b4v2_047", "question": "analiza la IP 91.92.251.103", "expected_tool": "otx_check_ioc"}
+{"id": "b4v2_048", "question": "¿c2-server.evil.net es C2?", "expected_tool": "otx_check_ioc"}
+{"id": "b4v2_049", "question": "reputación de update-flash.xyz", "expected_tool": "otx_check_ioc"}
