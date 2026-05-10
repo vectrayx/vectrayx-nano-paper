@@ -2,6 +2,8 @@
 
 **Paper:** *VectraYX-Nano: A 42M-Parameter Spanish Cybersecurity Language Model with Curriculum Learning and Native Tool Use*
 
+[![Preprint](https://zenodo.org/badge/DOI/10.5281/zenodo.20114348.svg)](https://doi.org/10.5281/zenodo.20114348)
+
 This repository contains the code, datasets, and pre-computed results needed to reproduce the key experiments from the paper.
 
 ---
