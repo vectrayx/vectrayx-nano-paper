@@ -1,0 +1,15 @@
+{
+  "description": "Frontier baselines on identical B1-B5 suite via Azure OpenAI API",
+  "eval_sets": {"B1": 200, "B2": 200, "B3": 100, "B4": 200, "B5": 314},
+  "models": {
+    "gpt-4o": {
+      "B1_cveqa_keyword": 0.333,
+      "B2_f1_macro": 0.110,
+      "B3_tool_match": 0.520,
+      "B3_exact_match": 0.100,
+      "B4_tooluse": 0.615,
+      "B5_conversational": 0.631
+    }
+  },
+  "note": "Gemini-2.5-Flash run interrupted (Azure Spot eviction at B4 step 100/200). Claude Sonnet 4.6 blocked by Azure quota."
+}

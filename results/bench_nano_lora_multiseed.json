@@ -1,6 +1,7 @@
 {
-  "description": "Nano 42M + LoRA (rank=16, alpha=32), tool_sft_mini_v1.jsonl (2801 examples, ratio 1:21), 5 epochs, lr=2e-4",
-  "model": "VectraYX-Nano 42M",
+  "description": "Nano 42M + LoRA (rank=16, alpha=32), tool_sft_mini_v1.jsonl (2801 examples, ratio 1:21), 5 epochs, lr=2e-4, expanded eval (B3:100, B4:200, B5:314)",
+  "model": "VectraYX-Nano 42M + LoRA",
+  "eval_sets": {"B1": 500, "B2": 200, "B3": 100, "B4": 200, "B5": 314},
   "corpus": "tool_sft_mini_v1.jsonl",
   "corpus_size": 2801,
   "ratio": "1:21",

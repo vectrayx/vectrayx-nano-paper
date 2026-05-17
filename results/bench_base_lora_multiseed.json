@@ -1,0 +1,21 @@
+{
+  "description": "Base 260M + LoRA (rank=16, alpha=32), tool_sft_mini_v1.jsonl (2801 examples, ratio 1:21), N=4 seeds",
+  "model": "VectraYX-Base 260M + LoRA",
+  "corpus": "tool_sft_mini_v1.jsonl",
+  "corpus_size": 2801,
+  "ratio": "1:21",
+  "lora_rank": 16, "lora_alpha": 32,
+  "eval_sets": {"B1": 500, "B2": 200, "B3": 100, "B4": 200, "B5": 314},
+  "seeds": {
+    "42": {"B1_cveqa_keyword": 0.019, "B2_f1_macro": 0.200, "B4_tooluse": 0.100, "B5_conversational": 0.600},
+    "7":  {"B1_cveqa_keyword": 0.017, "B2_f1_macro": 0.205, "B4_tooluse": 0.600, "B5_conversational": 0.600},
+    "13": {"B1_cveqa_keyword": 0.021, "B2_f1_macro": 0.200, "B4_tooluse": 0.540, "B5_conversational": 0.600},
+    "23": {"B1_cveqa_keyword": 0.017, "B2_f1_macro": 0.205, "B4_tooluse": 0.540, "B5_conversational": 0.600}
+  },
+  "aggregate": {
+    "B1_mean": 0.019, "B1_std": 0.003,
+    "B2_mean": 0.203, "B2_std": 0.002,
+    "B4_mean": 0.445, "B4_std": 0.201,
+    "B5_mean": 0.600, "B5_std": 0.000
+  }
+}

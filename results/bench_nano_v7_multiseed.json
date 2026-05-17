@@ -1,0 +1,32 @@
+{
+  "description": "Nano v7 (balanced SFT, ratio 1:21), N=4 seeds — HEADLINE RELEASED MODEL",
+  "model": "VectraYX-Nano v7",
+  "corpus": "balanced (13K OASST1-ES + 4K CVE QA + 2.8K tool-use, ratio 1:21)",
+  "ratio": "1:21",
+  "eval_sets": {"B1": 500, "B2": 200, "B3": 100, "B4": 200, "B5": 314},
+  "seeds": {
+    "42": {
+      "B1_cveqa_keyword": 0.336, "B2_f1_macro": 0.205,
+      "B4_tooluse": 0.280, "B5_conversational": 0.900
+    },
+    "7": {
+      "B1_cveqa_keyword": 0.331, "B2_f1_macro": 0.200,
+      "B4_tooluse": 0.160, "B5_conversational": 0.800
+    },
+    "13": {
+      "B1_cveqa_keyword": 0.325, "B2_f1_macro": 0.195,
+      "B4_tooluse": 0.200, "B5_conversational": 0.600
+    },
+    "23": {
+      "B1_cveqa_keyword": 0.336, "B2_f1_macro": 0.200,
+      "B4_tooluse": 0.280, "B5_conversational": 0.600
+    }
+  },
+  "aggregate": {
+    "B1_mean": 0.332, "B1_std": 0.005,
+    "B2_mean": 0.200, "B2_std": 0.004,
+    "B4_mean": 0.230, "B4_std": 0.052,
+    "B5_mean": 0.725, "B5_std": 0.130
+  },
+  "checkpoint": "nano_sft_v7_s{seed}.pt on jsantillana/vectrayx-nano"
+}

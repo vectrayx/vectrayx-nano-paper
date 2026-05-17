@@ -1,25 +1,200 @@
-{"id": "b4_000", "question": "Dame información sobre CVE-2024-1234", "expected_tool": "nvd_get_cve"}
-{"id": "b4_001", "question": "¿Qué es la vulnerabilidad CVE-2023-44487?", "expected_tool": "nvd_get_cve"}
-{"id": "b4_002", "question": "Analiza CVE-2024-21762 y dime su impacto", "expected_tool": "nvd_get_cve"}
-{"id": "b4_003", "question": "¿Cuál es el CVSS de CVE-2021-44228?", "expected_tool": "nvd_get_cve"}
-{"id": "b4_004", "question": "Necesito el detalle técnico de CVE-2023-23397", "expected_tool": "nvd_get_cve"}
-{"id": "b4_005", "question": "¿CVE-2024-1234 está siendo explotada activamente?", "expected_tool": "cisa_kev_check"}
-{"id": "b4_006", "question": "Verifica si CVE-2023-44487 está en CISA KEV", "expected_tool": "cisa_kev_check"}
-{"id": "b4_007", "question": "¿Debo parchear urgentemente CVE-2021-44228?", "expected_tool": "cisa_kev_check"}
-{"id": "b4_008", "question": "¿Hay explotación confirmada de CVE-2023-23397?", "expected_tool": "cisa_kev_check"}
-{"id": "b4_009", "question": "¿Qué CVEs existen para Apache Log4j?", "expected_tool": "nvd_search"}
-{"id": "b4_010", "question": "Busca vulnerabilidades críticas en Windows RDP", "expected_tool": "nvd_search"}
-{"id": "b4_011", "question": "CVEs de Fortinet FortiGate con CVSS mayor a 9", "expected_tool": "nvd_search"}
-{"id": "b4_012", "question": "¿Qué vulnerabilidades tiene OpenSSL?", "expected_tool": "nvd_search"}
-{"id": "b4_013", "question": "¿La IP 185.220.101.1 es maliciosa?", "expected_tool": "otx_check_ioc"}
-{"id": "b4_014", "question": "Verifica si evil-domain.xyz es un IOC conocido", "expected_tool": "otx_check_ioc"}
-{"id": "b4_015", "question": "¿El hash a1b2c3d4... corresponde a malware?", "expected_tool": "otx_check_ioc"}
-{"id": "b4_016", "question": "Analiza la reputación de 45.142.212.100", "expected_tool": "otx_check_ioc"}
-{"id": "b4_017", "question": "Escanea los puertos de 192.168.1.1", "expected_tool": "bash_exec"}
-{"id": "b4_018", "question": "Muestra los procesos con conexiones de red", "expected_tool": "bash_exec"}
-{"id": "b4_019", "question": "Busca archivos modificados en las últimas 2 horas", "expected_tool": "bash_exec"}
-{"id": "b4_020", "question": "¿Qué fecha y hora tiene el servidor?", "expected_tool": "bash_exec"}
-{"id": "b4_021", "question": "Lista los usuarios con shell válida en el sistema", "expected_tool": "bash_exec"}
-{"id": "b4_022", "question": "Captura el tráfico DNS durante 30 segundos", "expected_tool": "bash_exec"}
-{"id": "b4_023", "question": "Verifica la integridad de /usr/bin/ssh", "expected_tool": "bash_exec"}
-{"id": "b4_024", "question": "Muestra el espacio libre en disco", "expected_tool": "bash_exec"}
+{"prompt": "Dame la descripción completa de la vulnerabilidad identificada como CVE-2023-38831.", "expected_tool": "nvd_get_cve"}
+{"prompt": "¿Qué información detallada tienes sobre el fallo de seguridad con ID CVE-2022-22965?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Necesito saber los pormenores de la alerta de seguridad CVE-2024-24919. Specifically, the CVSS score.", "expected_tool": "nvd_get_cve"}
+{"prompt": "Investiga los detalles del bug CVE-2020-1472. ¿Cuál fue su impacto principal?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Quiero todos los datos disponibles para la vulnerabilidad CVE-2017-5753, la famosa 'Spectre'.", "expected_tool": "nvd_get_cve"}
+{"prompt": "¿Hay alguna vulnerabilidad conocida para el producto 'Apache Struts'?", "expected_tool": "nvd_search"}
+{"prompt": "Busca fallos de seguridad relacionados con 'Microsoft Exchange Server' en los últimos dos años.", "expected_tool": "nvd_search"}
+{"prompt": "Quiero ver las alertas de seguridad que mencionan 'Log4j' o 'Log4Shell'. Give me a summary.", "expected_tool": "nvd_search"}
+{"prompt": "¿Qué vulnerabilidades se han reportado para 'VMware vCenter'?", "expected_tool": "nvd_search"}
+{"prompt": "Encuentra cualquier problema de seguridad reciente asociado con 'OpenSSL' que no sea específico de una versión.", "expected_tool": "nvd_search"}
+{"prompt": "¿Está la vulnerabilidad CVE-2021-44228 en la lista KEV de CISA?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Verifica si el fallo de seguridad con ID CVE-2023-23397 es parte del catálogo de vulnerabilidades explotadas conocidas de CISA.", "expected_tool": "cisa_kev_check"}
+{"prompt": "Dime si el bug CVE-2024-21338 aparece en la lista de CISA de 'Known Exploited Vulnerabilities'.", "expected_tool": "cisa_kev_check"}
+{"prompt": "¿Ha sido añadido el CVE-2022-0778 a la lista KEV de CISA?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Necesito saber si la alerta CVE-2023-38831 está en el listado de CISA KEV.", "expected_tool": "cisa_kev_check"}
+{"prompt": "¿Qué información hay sobre la dirección IP 185.220.101.218 en OTX?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Verifica el dominio 'phishing-site.xyz' en OTX. Is it known for bad stuff?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Quiero analizar el hash MD5 '0a8e100414999f848149e6f8dd5847e9' en AlienVault OTX.", "expected_tool": "otx_check_ioc"}
+{"prompt": "¿Es la IP 103.224.212.222 un indicador de compromiso conocido según OTX?", "expected_tool": "otx_check_ioc"}
+{"prompt": "¿Hay reportes de actividad maliciosa asociados al dominio 'pastebin.com' en OTX?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Muestra los últimos 10 entries del archivo `/var/log/auth.log`.", "expected_tool": "bash_exec"}
+{"prompt": "¿Qué procesos están corriendo actualmente en el sistema?", "expected_tool": "bash_exec"}
+{"prompt": "Lista las conexiones de red activas en el servidor. I need to check for suspicious activity.", "expected_tool": "bash_exec"}
+{"prompt": "Verifica si existe el archivo `/tmp/malicious_payload.sh`.", "expected_tool": "bash_exec"}
+{"prompt": "Quiero ver el contenido del archivo `/etc/passwd` para un análisis de usuarios.", "expected_tool": "bash_exec"}
+{"prompt": "¿Podrías darme la descripción completa del fallo de seguridad identificado como CVE-2023-34039?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Necesito los detalles de la vulnerabilidad con ID CVE-2024-24919.", "expected_tool": "nvd_get_cve"}
+{"prompt": "What are the specifics of CVE-2022-22965, the SpringShell vulnerability?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Muéstrame toda la información que tengas sobre el ID de vulnerabilidad CVE-2021-44228, la de Log4j.", "expected_tool": "nvd_get_cve"}
+{"prompt": "Dime la severidad y el impacto de la alerta de seguridad CVE-2023-46805.", "expected_tool": "nvd_get_cve"}
+{"prompt": "Busca vulnerabilidades recientes relacionadas con Microsoft Exchange.", "expected_tool": "nvd_search"}
+{"prompt": "Quiero encontrar alertas de seguridad que mencionen 'Log4j' y su impacto.", "expected_tool": "nvd_search"}
+{"prompt": "Are there any known security flaws affecting 'OpenSSL' versions 3.0 or higher?", "expected_tool": "nvd_search"}
+{"prompt": "Show me any vulnerabilities reported for 'VMware ESXi'.", "expected_tool": "nvd_search"}
+{"prompt": "Necesito una lista de fallos de seguridad que involucren 'WordPress' plugins.", "expected_tool": "nvd_search"}
+{"prompt": "¿Está la vulnerabilidad CVE-2023-34039 incluida en la lista KEV de CISA?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Is CVE-2024-24919 currently being exploited in the wild, according to CISA?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Verifica si el fallo de seguridad CVE-2021-44228 está en la lista de vulnerabilidades activamente explotadas por CISA.", "expected_tool": "cisa_kev_check"}
+{"prompt": "¿La alerta CVE-2023-46805 está en el catálogo de vulnerabilidades conocidas y explotadas de CISA?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Dime si CVE-2022-22965, the SpringShell flaw, is on CISA's KEV list.", "expected_tool": "cisa_kev_check"}
+{"prompt": "Check the reputation of IP address 185.199.108.153 on OTX.", "expected_tool": "otx_check_ioc"}
+{"prompt": "¿Es 'malicious-domain.xyz' un dominio conocido por actividades maliciosas?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Necesito información sobre el hash SHA256 'a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2'.", "expected_tool": "otx_check_ioc"}
+{"prompt": "¿Qué sabes sobre la IP '192.168.1.1' en AlienVault OTX?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Is this file hash 'md5:d41d8cd98f00b204e9800998ecf8427e' associated with any known threats?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Muéstrame los últimos diez registros del log de autenticación de mi sistema.", "expected_tool": "bash_exec"}
+{"prompt": "¿Hay algún proceso sospechoso consumiendo muchos recursos en el sistema?", "expected_tool": "bash_exec"}
+{"prompt": "List all the active network connections on this host, please.", "expected_tool": "bash_exec"}
+{"prompt": "¿Podrías revisar si hay algún archivo modificado en el directorio '/tmp' en la última hora?", "expected_tool": "bash_exec"}
+{"prompt": "Quiero ver los usuarios actualmente logueados en el sistema.", "expected_tool": "bash_exec"}
+{"prompt": "¿Podrías darme todos los detalles disponibles sobre el fallo de seguridad identificado como CVE-2021-44228?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Necesito la información completa del reporte de seguridad con ID CVE-2017-5638.", "expected_tool": "nvd_get_cve"}
+{"prompt": "¿Qué se sabe del famoso bug de Heartbleed, específicamente la vulnerabilidad CVE-2014-0160?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Muéstrame el informe detallado de la alerta de seguridad CVE-2023-38831.", "expected_tool": "nvd_get_cve"}
+{"prompt": "Quiero consultar la descripción y severidad de la vulnerabilidad con identificador CVE-2022-22965.", "expected_tool": "nvd_get_cve"}
+{"prompt": "Busca las vulnerabilidades relacionadas con 'Apache Struts'.", "expected_tool": "nvd_search"}
+{"prompt": "¿Existen fallos de seguridad recientes que afecten a 'VMware ESXi'?", "expected_tool": "nvd_search"}
+{"prompt": "Quiero encontrar alertas de seguridad para 'Jenkins' en los últimos años.", "expected_tool": "nvd_search"}
+{"prompt": "¿Me podrías listar los riesgos de seguridad conocidos para 'OpenSSL'?", "expected_tool": "nvd_search"}
+{"prompt": "Necesito saber sobre las vulnerabilidades en 'Microsoft Exchange Server'.", "expected_tool": "nvd_search"}
+{"prompt": "¿La vulnerabilidad CVE-2021-44228 está siendo explotada activamente según CISA?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Verifica si el fallo de seguridad CVE-2023-23397 está en la lista KEV.", "expected_tool": "cisa_kev_check"}
+{"prompt": "Necesito saber si la alerta CVE-2020-0796 tiene prioridad máxima de remediación por estar en KEV.", "expected_tool": "cisa_kev_check"}
+{"prompt": "¿Es la vulnerabilidad de Log4j de hace unos años, CVE-2021-44228, parte de las Known Exploited Vulnerabilities?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Antes de profundizar, ¿podrías confirmar si la vulnerabilidad CVE-2022-0847 se encuentra en el catálogo de CISA de vulnerabilidades explotadas?", "expected_tool": "cisa_kev_check"}
+{"prompt": "¿Qué información tienes sobre el IP 185.220.101.218 en OTX?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Verifica si el dominio 'malicious-site.com' es un indicador de compromiso conocido.", "expected_tool": "otx_check_ioc"}
+{"prompt": "Necesito la reputación del hash MD5 'd41d8cd98f00b204e9800998ecf8427e'.", "expected_tool": "otx_check_ioc"}
+{"prompt": "¿Este dominio 'phishing-example.net' ha sido reportado como threat en AlienVault OTX?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Quiero saber si el IP '192.168.1.1' tiene alguna actividad sospechosa registrada.", "expected_tool": "otx_check_ioc"}
+{"prompt": "Quiero revisar los últimos 100 entries del auth.log. ¿Puedes ejecutar 'tail -n 100 /var/log/auth.log'?", "expected_tool": "bash_exec"}
+{"prompt": "Lista los procesos que están escuchando en puertos de red. Usa 'sudo netstat -tulnp'.", "expected_tool": "bash_exec"}
+{"prompt": "¿Puedes mostrar el contenido del archivo '/etc/passwd' para verificar usuarios?", "expected_tool": "bash_exec"}
+{"prompt": "Necesito obtener los últimos 50 eventos del journalctl para el servicio sshd. El comando sería 'journalctl -u sshd -n 50'.", "expected_tool": "bash_exec"}
+{"prompt": "Chequea la versión del kernel de este sistema con 'uname -a'.", "expected_tool": "bash_exec"}
+{"prompt": "¿Podrías darme todos los detalles disponibles sobre la vulnerabilidad identificada como CVE-2023-45678?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Necesito saber más acerca del fallo de seguridad con el identificador CVE-2022-12345. What's the impact?", "expected_tool": "nvd_get_cve"}
+{"prompt": "¿Qué información tienes sobre la alerta de seguridad CVE-2021-98765?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Si alguien menciona el bug CVE-2024-11223, ¿cuál es su descripción principal y severidad?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Dame un resumen de la vulnerabilidad con ID CVE-2020-00777.", "expected_tool": "nvd_get_cve"}
+{"prompt": "Busca vulnerabilidades relacionadas con 'Apache Log4j'.", "expected_tool": "nvd_search"}
+{"prompt": "¿Hay alguna alerta de seguridad reciente para productos de 'Microsoft Exchange'?", "expected_tool": "nvd_search"}
+{"prompt": "Quiero encontrar fallos de seguridad que mencionen 'buffer overflow' en los últimos años.", "expected_tool": "nvd_search"}
+{"prompt": "¿Podrías darme un listado de las vulnerabilidades asociadas con 'OpenSSL'?", "expected_tool": "nvd_search"}
+{"prompt": "Recuerdo un problema de seguridad en 'Zoom' hace un tiempo. ¿Puedes buscarlo?", "expected_tool": "nvd_search"}
+{"prompt": "¿Está la vulnerabilidad CVE-2023-33333 en el catálogo KEV de CISA?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Quiero saber si el fallo de seguridad CVE-2022-22222 ha sido añadido a la lista de vulnerabilidades explotadas conocidas por CISA.", "expected_tool": "cisa_kev_check"}
+{"prompt": "¿CISA ha incluido el bug CVE-2024-44444 en su Known Exploited Vulnerabilities catalog?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Verifica si la alerta de seguridad CVE-2021-11111 está en la lista de CISA de vulnerabilidades activamente explotadas.", "expected_tool": "cisa_kev_check"}
+{"prompt": "Si tengo el identificador CVE-2020-00001, ¿puedes decirme si CISA lo considera una vulnerabilidad explotada?", "expected_tool": "cisa_kev_check"}
+{"prompt": "¿Qué reputación tiene la dirección IP 192.168.1.1 en OTX?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Consulta en OTX si el dominio 'malicious.example.com' es conocido por actividades sospechosas.", "expected_tool": "otx_check_ioc"}
+{"prompt": "Necesito verificar el hash MD5 'd41d8cd98f00b204e9800998ecf8427e' en AlienVault OTX.", "expected_tool": "otx_check_ioc"}
+{"prompt": "¿Hay alguna información sobre 'phishing.site.co' en Open Threat Exchange?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Investiga el IP address '203.0.113.45' en OTX para ver si tiene alguna alerta.", "expected_tool": "otx_check_ioc"}
+{"prompt": "Lista los archivos en el directorio `/var/log`.", "expected_tool": "bash_exec"}
+{"prompt": "¿Qué procesos se están ejecutando actualmente en el sistema?", "expected_tool": "bash_exec"}
+{"prompt": "Muéstrame las conexiones de red activas.", "expected_tool": "bash_exec"}
+{"prompt": "¿Quién está logueado en este momento?", "expected_tool": "bash_exec"}
+{"prompt": "Quiero ver los últimos 100 entries del archivo `/var/log/auth.log`.", "expected_tool": "bash_exec"}
+{"prompt": "¿Puedes darme los detalles completos de la vulnerabilidad con el identificador CVE-2023-45678?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Necesito saber todo sobre el fallo de seguridad catalogado como 2022-12345. ¿Qué información hay disponible?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Quiero ver el reporte de la famosa vulnerabilidad de Log4j, la que tiene el ID CVE-2021-44228.", "expected_tool": "nvd_get_cve"}
+{"prompt": "Could you retrieve the full report for the security alert, the one with identifier CVE-2024-11223?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Me interesa conocer los pormenores de la vulnerabilidad 2020-009988. ¿Puedes proporcionarlos?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Busca vulnerabilidades relacionadas con 'Apache Struts'.", "expected_tool": "nvd_search"}
+{"prompt": "¿Hay alguna alerta de seguridad reciente para productos de 'Microsoft Exchange'?", "expected_tool": "nvd_search"}
+{"prompt": "Encuentra fallos de seguridad que mencionen 'buffer overflow' en los últimos años.", "expected_tool": "nvd_search"}
+{"prompt": "I need to find any security issues concerning 'VMware ESXi'.", "expected_tool": "nvd_search"}
+{"prompt": "¿Qué vulnerabilidades se han reportado sobre 'Jenkins'?", "expected_tool": "nvd_search"}
+{"prompt": "¿Está el CVE-2023-12345 en la lista de vulnerabilidades explotadas conocidas de CISA?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Verifica si la alerta de seguridad 2022-98765 ha sido añadida a la KEV de CISA.", "expected_tool": "cisa_kev_check"}
+{"prompt": "¿Es la famosa vulnerabilidad de Log4j (CVE-2021-44228) parte de las fallas de seguridad activamente explotadas según CISA?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Is CVE-2024-00112 a known exploited vulnerability according to CISA?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Necesito saber si la vulnerabilidad identificada como 2020-54321 está en la lista de CISA KEV.", "expected_tool": "cisa_kev_check"}
+{"prompt": "Verifica la reputación de la IP '192.168.1.1' en OTX.", "expected_tool": "otx_check_ioc"}
+{"prompt": "¿Qué información tienes en OTX sobre el dominio 'malicious.example.com'?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Quiero chequear el hash 'a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6' en AlienVault OTX.", "expected_tool": "otx_check_ioc"}
+{"prompt": "Is there any threat intelligence related to 'suspicious-domain.net' in OTX?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Analiza este indicador de compromiso en OTX: '10.0.0.5'.", "expected_tool": "otx_check_ioc"}
+{"prompt": "Muéstrame los últimos 5 intentos de inicio de sesión fallidos en el sistema.", "expected_tool": "bash_exec"}
+{"prompt": "Listar los procesos activos que consumen más CPU.", "expected_tool": "bash_exec"}
+{"prompt": "Verifica si el archivo `/etc/passwd` ha sido modificado en las últimas 24 horas.", "expected_tool": "bash_exec"}
+{"prompt": "What's the current network configuration of the 'eth0' interface?", "expected_tool": "bash_exec"}
+{"prompt": "Dime el espacio libre en disco para el punto de montaje raíz.", "expected_tool": "bash_exec"}
+{"prompt": "Dame toda la información disponible sobre el CVE-2021-44228.", "expected_tool": "nvd_get_cve"}
+{"prompt": "Podrías mostrarme los pormenores del fallo de seguridad identificado como CVE-2014-0160, el de Heartbleed?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Necesito los detalles técnicos de la alerta CVE-2022-22965. What's the impact?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Qué se sabe del identificador de vulnerabilidad CVE-2023-38831?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Quiero un resumen de la vulnerabilidad CVE-2020-0796. Es critical?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Busca las últimas vulnerabilidades que afecten a Apache Struts.", "expected_tool": "nvd_search"}
+{"prompt": "Encuentra cualquier fallo de seguridad relacionado con 'Log4j'.", "expected_tool": "nvd_search"}
+{"prompt": "Quiero saber sobre las alertas de seguridad para productos de Microsoft Exchange de los últimos dos años.", "expected_tool": "nvd_search"}
+{"prompt": "Are there any vulnerabilities associated with 'VMware ESXi' that allow remote code execution?", "expected_tool": "nvd_search"}
+{"prompt": "Qué vulnerabilidades se han reportado en 'OpenSSL' que sean de alta criticidad?", "expected_tool": "nvd_search"}
+{"prompt": "Verifica si el CVE-2021-44228 está en el catálogo de CISA KEV.", "expected_tool": "cisa_kev_check"}
+{"prompt": "Está la vulnerabilidad de Log4j (CVE-2021-44228) en la lista de CISA de vulnerabilidades explotadas activamente?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Is CVE-2023-2825 currently known to be actively exploited by CISA?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Quiero saber si la alerta de seguridad CVE-2022-22954 figura en el catálogo de vulnerabilidades explotadas de CISA.", "expected_tool": "cisa_kev_check"}
+{"prompt": "Comprueba si el fallo CVE-2020-0601 ha sido añadido a la lista KEV de CISA.", "expected_tool": "cisa_kev_check"}
+{"prompt": "Analiza el indicador de compromiso 185.220.101.215 en OTX.", "expected_tool": "otx_check_ioc"}
+{"prompt": "Existe alguna reputación maliciosa para el dominio 'malicious-domain.com' según OTX?", "expected_tool": "otx_check_ioc"}
+{"prompt": "What information does OTX have about the hash 'd41d8cd98f00b204e9800998ecf8427e'?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Quiero verificar la reputación del IP '192.168.1.1' en OTX. Is it clean?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Dame datos de OTX sobre el dominio 'phishing-site.ru'.", "expected_tool": "otx_check_ioc"}
+{"prompt": "Muéstrame los últimos 100 registros del archivo '/var/log/auth.log'.", "expected_tool": "bash_exec"}
+{"prompt": "Puedes listar los procesos activos que utilizan más CPU en este momento?", "expected_tool": "bash_exec"}
+{"prompt": "I need to see the current network connections on port 443. Show me the output of `netstat -tulnp | grep 443`.", "expected_tool": "bash_exec"}
+{"prompt": "Revisa si hay archivos modificados en '/tmp' en las últimas 24 horas.", "expected_tool": "bash_exec"}
+{"prompt": "Qué usuarios están actualmente logueados en el sistema?", "expected_tool": "bash_exec"}
+{"prompt": "¿Puedes darme todos los detalles sobre la vulnerabilidad identificada como CVE-2021-44228?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Necesito la información completa sobre el fallo de seguridad CVE-2023-20198. ¿Qué se sabe al respecto?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Explícame qué es CVE-2022-22965. What kind of exploit is it?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Podrías buscar la descripción exhaustiva de la alerta CVE-2024-20353?", "expected_tool": "nvd_get_cve"}
+{"prompt": "¿Qué datos tienes sobre la vulnerabilidad CVE-2023-38831?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Busca vulnerabilidades relacionadas con 'Apache Struts' en la base de datos.", "expected_tool": "nvd_search"}
+{"prompt": "Quiero ver las alertas de seguridad recientes para productos de 'Microsoft Exchange'.", "expected_tool": "nvd_search"}
+{"prompt": "¿Encuentra cualquier fallo que mencione 'SolarWinds Orion'?", "expected_tool": "nvd_search"}
+{"prompt": "¿Hay alguna vulnerabilidad conocida para 'VMware ESXi' en los últimos años?", "expected_tool": "nvd_search"}
+{"prompt": "Necesito buscar vulnerabilidades que afecten a 'Jenkins' y su plugin 'Pipeline'.", "expected_tool": "nvd_search"}
+{"prompt": "¿Está la vulnerabilidad CVE-2021-44228 en la lista de CISA de fallos explotados activamente?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Verifica si el fallo CVE-2023-20198 ha sido añadido al CISA KEV catalog.", "expected_tool": "cisa_kev_check"}
+{"prompt": "¿Es CVE-2022-22965 una vulnerabilidad conocida por ser activamente explotada según CISA?", "expected_tool": "cisa_kev_check"}
+{"prompt": "¿Podrías confirmar si la alerta CVE-2023-38831 está en el Known Exploited Vulnerabilities de CISA?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Necesito saber si la vulnerabilidad que afectó a Log4j (CVE-2021-44228) está en el catálogo KEV de CISA.", "expected_tool": "cisa_kev_check"}
+{"prompt": "Revisa la reputación del dominio 'malicious-phishing.xyz' en OTX.", "expected_tool": "otx_check_ioc"}
+{"prompt": "¿Qué información de inteligencia de amenazas tienes sobre la IP '185.239.236.197'?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Analiza este hash MD5 'a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6' en OTX.", "expected_tool": "otx_check_ioc"}
+{"prompt": "Verifica si el dominio 'suspicious-update.net' ha sido reportado como malicioso en OTX.", "expected_tool": "otx_check_ioc"}
+{"prompt": "Quiero saber si la IP '104.26.10.231' tiene alguna actividad sospechosa registrada en OTX.", "expected_tool": "otx_check_ioc"}
+{"prompt": "Muéstrame los últimos 100 registros del archivo '/var/log/auth.log'.", "expected_tool": "bash_exec"}
+{"prompt": "¿Qué procesos están corriendo actualmente en el sistema?", "expected_tool": "bash_exec"}
+{"prompt": "Necesito ver las conexiones de red activas. Show me the current network connections.", "expected_tool": "bash_exec"}
+{"prompt": "¿Podrías listar los archivos en el directorio '/tmp'?", "expected_tool": "bash_exec"}
+{"prompt": "¿Cuál es el uso de disco en el servidor?", "expected_tool": "bash_exec"}
+{"prompt": "¿Qué se sabe de la vulnerabilidad con identificador CVE-2023-38831? Necesito un resumen.", "expected_tool": "nvd_get_cve"}
+{"prompt": "¿Podrías darme la información completa sobre el fallo de seguridad CVE-2017-0199?", "expected_tool": "nvd_get_cve"}
+{"prompt": "¿Cuál es la descripción y severidad de la alerta de seguridad CVE-2024-24919?", "expected_tool": "nvd_get_cve"}
+{"prompt": "Investiga el bug CVE-2022-22965, por favor.", "expected_tool": "nvd_get_cve"}
+{"prompt": "Necesito los detalles del defecto de seguridad CVE-2020-1472, conocido como Zerologon.", "expected_tool": "nvd_get_cve"}
+{"prompt": "Busca vulnerabilidades relacionadas con 'Apache Struts'.", "expected_tool": "nvd_search"}
+{"prompt": "Encuentra fallos de seguridad recientes que afecten a 'Microsoft Exchange Server'.", "expected_tool": "nvd_search"}
+{"prompt": "¿Hay alguna alerta de seguridad conocida para 'VMware ESXi'?", "expected_tool": "nvd_search"}
+{"prompt": "Quisiera saber sobre vulnerabilidades de tipo 'SQL Injection' en general.", "expected_tool": "nvd_search"}
+{"prompt": "Search for any security issues concerning 'OpenSSL' from the last year.", "expected_tool": "nvd_search"}
+{"prompt": "¿Está la vulnerabilidad CVE-2021-44228 en la lista KEV de CISA?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Verifica si el fallo de seguridad CVE-2023-23397 es parte del catálogo de vulnerabilidades explotadas conocidas de CISA.", "expected_tool": "cisa_kev_check"}
+{"prompt": "¿Es el bug CVE-2024-21338 uno de los que CISA ha marcado como activamente explotado?", "expected_tool": "cisa_kev_check"}
+{"prompt": "Quiero saber si la alerta CVE-2020-0796 está en la lista de CISA de vulnerabilidades que se están explotando.", "expected_tool": "cisa_kev_check"}
+{"prompt": "Check if CVE-2022-22954 is on CISA's KEV list.", "expected_tool": "cisa_kev_check"}
+{"prompt": "¿Qué información tienes sobre el dominio 'malicious-site.ru'?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Verifica la reputación de la dirección IP '185.207.207.136'.", "expected_tool": "otx_check_ioc"}
+{"prompt": "Necesito saber si el hash MD5 'd41d8cd98f00b204e9800998ecf8427e' tiene alguna actividad maliciosa registrada.", "expected_tool": "otx_check_ioc"}
+{"prompt": "¿Hay algún reporte de que 'trojan.example.com' sea un indicador de compromiso?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Is the IP address '192.168.1.1' known to be malicious according to OTX?", "expected_tool": "otx_check_ioc"}
+{"prompt": "Muéstrame las últimas 50 líneas del log de autenticación en `/var/log/auth.log`.", "expected_tool": "bash_exec"}
+{"prompt": "¿Qué procesos están consumiendo más CPU en este momento?", "expected_tool": "bash_exec"}
+{"prompt": "Lista los archivos en el directorio `/var/www/html`.", "expected_tool": "bash_exec"}
+{"prompt": "Quiero saber las conexiones de red establecidas en el sistema.", "expected_tool": "bash_exec"}
+{"prompt": "Busca la palabra 'error' en el archivo `/var/log/syslog`.", "expected_tool": "bash_exec"}
